@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leadership | Grapid Engineering Pvt Ltd</title>
+
+  <meta
+    name="description"
+    content="Meet the leadership and engineering team at Grapid Engineering Pvt Ltd."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    .inner-hero {
+      min-height: 52vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 150px 0 80px;
+      background:
+        linear-gradient(180deg, rgba(7,17,31,.2), rgba(7,17,31,.95)),
+        url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=85")
+        center/cover;
+      color: #fff;
+    }
+
+    .inner-hero h1 {
+      max-width: 850px;
+      margin: 16px 0;
+      font-size: clamp(46px, 7vw, 92px);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+
+    .inner-hero p {
+      max-width: 700px;
+      color: rgba(255,255,255,.72);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .leadership-intro {
+      max-width: 850px;
+      margin-bottom: 70px;
+    }
+
+    .leadership-intro h2 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      margin: 15px 0 20px;
+    }
+
+    .leadership-intro p {
+      color: #64748b;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #dbe2ea;
+      overflow: hidden;
+      transition: .3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 55px rgba(7,17,31,.1);
+    }
+
+    .team-photo {
+      aspect-ratio: 4 / 4.5;
+      background: #e8edf2;
+      overflow: hidden;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-info {
+      padding: 28px;
+    }
+
+    .team-info h3 {
+      font-family: "Manrope", sans-serif;
+      font-size: 24px;
+      margin-bottom: 7px;
+    }
+
+    .team-designation {
+      color: #e57b2c;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .team-bio {
+      color: #64748b;
+      margin-top: 15px;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .team-linkedin {
+      display: inline-flex;
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #07111f;
+    }
+
+    .team-empty {
+      grid-column: 1 / -1;
+      border: 1px solid #dbe2ea;
+      padding: 100px 30px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(7,17,31,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7,17,31,.025) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .team-empty-mark {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 25px;
+      border: 1px solid #cbd5e1;
+      display: grid;
+      place-items: center;
+      font-family: "Manrope";
+      font-weight: 800;
+      color: #e57b2c;
+    }
+
+    .team-empty h3 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .team-empty p {
+      max-width: 600px;
+      margin: auto;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    .leadership-principles {
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #dbe2ea;
+      border-left: 1px solid #dbe2ea;
+    }
+
+    .principle {
+      padding: 40px;
+      border-right: 1px solid #dbe2ea;
+      border-bottom: 1px solid #dbe2ea;
+    }
+
+    .principle-number {
+      color: #e57b2c;
+      font-family: "Manrope";
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .12em;
+    }
+
+    .principle h3 {
+      margin: 30px 0 12px;
+      font-size: 23px;
+    }
+
+    .principle p {
+      color: #64748b;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .leadership-principles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .inner-hero {
+        min-height: 60vh;
+        padding: 130px 0 60px;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+
+  <div class="container nav-wrap">
+
+    <a href="index.html" class="brand">
+      <span class="brand-mark">GE</span>
+
+      <span class="brand-text">
+        <strong>GRAPID</strong>
+        <small>ENGINEERING PVT LTD</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="industries.html">Industries</a>
+      <a href="clients.html">Clients</a>
+      <a href="team.html" class="active">Leadership</a>
+
+      <a href="contact.html" class="nav-cta">
+        Let's Talk <span>↗</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<section class="inner-hero">
+
+  <div class="container">
+
+    <div class="eyebrow light">
+      LEADERSHIP & PEOPLE
+    </div>
+
+    <h1>
+      People behind
+      the engineering.
+    </h1>
+
+    <p>
+      Engineering quality comes from people who understand the details,
+      coordinate the moving parts and take responsibility for execution.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="leadership-intro reveal">
+
+      <div class="eyebrow">
+        OUR TEAM
+      </div>
+
+      <h2>
+        Experience that turns
+        <span class="accent">plans into reality.</span>
+      </h2>
+
+      <p>
+        Our team combines engineering thinking, project coordination and
+        execution-focused discipline across the built environment.
+      </p>
+
+    </div>
+
+
+    <div class="team-grid reveal" id="teamGrid">
+
+      <div class="team-empty">
+
+        <div class="team-empty-mark">
+          GE
+        </div>
+
+        <h3>
+          Leadership profiles coming soon.
+        </h3>
+
+        <p>
+          Verified management and team profiles will be published here
+          once the information is approved for the GEPL website.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="leadership-principles reveal">
+
+      <article class="principle">
+
+        <span class="principle-number">01 / OWNERSHIP</span>
+
+        <h3>Take responsibility.</h3>
+
+        <p>
+          Clear ownership creates better coordination, faster decisions
+          and stronger project outcomes.
+        </p>
+
+      </article>
+
+
+      <article class="principle">
+
+        <span class="principle-number">02 / PRECISION</span>
+
+        <h3>Respect the details.</h3>
+
+        <p>
+          Engineering performance is often determined by the details
+          others overlook.
+        </p>
+
+      </article>
+
+
+      <article class="principle">
+
+        <span class="principle-number">03 / DELIVERY</span>
+
+        <h3>Finish strong.</h3>
+
+        <p>
+          Good engineering must ultimately translate into dependable
+          execution and commissioning.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-main">
+
+    <div>
+
+      <a href="index.html" class="brand footer-brand">
+
+        <span class="brand-mark">GE</span>
+
+        <span class="brand-text">
+          <strong>GRAPID</strong>
+          <small>ENGINEERING PVT LTD</small>
+        </span>
+
+      </a>
+
+      <p class="footer-description">
+        Integrated engineering solutions across Civil, Electrical,
+        MEP, HVAC, Fire & Safety and specialized services.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <div>
+        <span class="footer-title">Explore</span>
+
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+
+      </div>
+
+      <div>
+
+        <span class="footer-title">Connect</span>
+
+        <a href="clients.html">Clients</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="footerYear"></span>
+      Grapid Engineering Pvt Ltd.
+    </span>
+
+    <span>
+      Engineering. Execution. Excellence.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="config/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+  const grid = document.getElementById("teamGrid");
+
+  try {
+
+    const team = await GEPL.team();
+
+    if (!Array.isArray(team) || !team.length) {
+      return;
+    }
+
+    grid.innerHTML = team.map(member => {
+
+      const photo = member.photo
+        ? `
+          <div class="team-photo">
+            <img
+              src="${escapeAttribute(member.photo)}"
+              alt="${escapeAttribute(member.name || "Team member")}"
+              loading="lazy"
+            >
+          </div>
+        `
+        : `
+          <div class="team-photo"></div>
+        `;
+
+      return `
+
+        <article class="team-card">
+
+          ${photo}
+
+          <div class="team-info">
+
+            <h3>
+              ${escapeHTML(member.name || "")}
+            </h3>
+
+            <div class="team-designation">
+              ${escapeHTML(member.designation || "")}
+            </div>
+
+            ${
+              member.bio
+                ? `<p class="team-bio">
+                    ${escapeHTML(member.bio)}
+                   </p>`
+                : ""
+            }
+
+            ${
+              member.linkedin
+                ? `
+                  <a
+                    class="team-linkedin"
+                    href="${escapeAttribute(member.linkedin)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn ↗
+                  </a>
+                `
+                : ""
+            }
+
+          </div>
+
+        </article>
+
+      `;
+
+    }).join("");
+
+  } catch (error) {
+
+    console.error("Team load error:", error);
+
+  }
+
+});
+
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
+
+}
+
+</script>
+
+</body>
+</html>
