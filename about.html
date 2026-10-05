@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>About | GRAPID Engineering Pvt Ltd</title>
+
+<meta
+  name="description"
+  content="Learn about GRAPID Engineering Pvt Ltd and its integrated engineering approach across civil, electrical, MEP, HVAC, fire safety and specialized services."
+>
+
+<meta name="theme-color"
+      content="#07111f">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+ href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+ rel="stylesheet">
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+<style>
+
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+
+.about-hero {
+
+  min-height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding-bottom: 90px;
+
+  color: white;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(4,10,18,.96),
+      rgba(4,10,18,.68),
+      rgba(4,10,18,.48)
+    ),
+
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.about-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.about-kicker {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .2em;
+
+  color: rgba(255,255,255,.58);
+
+}
+
+
+.about-kicker::before {
+
+  content: "";
+
+  width: 35px;
+
+  height: 1px;
+
+  background: var(--orange);
+
+}
+
+
+.about-hero h1 {
+
+  max-width: 950px;
+
+  font-size:
+    clamp(52px,7vw,94px);
+
+  letter-spacing: -.065em;
+
+}
+
+
+.about-hero h1 span {
+
+  display: block;
+
+  color: rgba(255,255,255,.35);
+
+}
+
+
+.about-hero p {
+
+  max-width: 570px;
+
+  margin-top: 28px;
+
+  font-size: 16px;
+
+  color: rgba(255,255,255,.58);
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.about-intro {
+
+  padding: 150px 0;
+
+  background: var(--off-white);
+
+}
+
+
+.about-intro-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    .8fr;
+
+  gap: 120px;
+
+}
+
+
+.about-intro h2 {
+
+  max-width: 700px;
+
+  font-size:
+    clamp(40px,5vw,70px);
+
+}
+
+
+.about-intro h2 span {
+
+  display: block;
+
+  color: var(--steel);
+
+}
+
+
+.about-intro-copy {
+
+  padding-top: 10px;
+
+}
+
+
+.about-intro-copy p {
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  margin-bottom: 22px;
+
+}
+
+
+/* =====================================================
+   PRINCIPLES
+===================================================== */
+
+.about-principles {
+
+  padding: 140px 0;
+
+  background: var(--paper);
+
+}
+
+
+.about-principles-heading {
+
+  margin-bottom: 70px;
+
+}
+
+
+.about-principles-heading h2 {
+
+  max-width: 750px;
+
+  font-size:
+    clamp(40px,5vw,65px);
+
+}
+
+
+.about-principles-heading h2 span {
+
+  color: var(--steel);
+
+}
+
+
+.principles-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  border-top:
+    1px solid var(--border);
+
+  border-left:
+    1px solid var(--border);
+
+}
+
+
+.principle {
+
+  min-height: 300px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid var(--border);
+
+  border-bottom:
+    1px solid var(--border);
+
+}
+
+
+.principle-number {
+
+  display: block;
+
+  color: var(--orange);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  margin-bottom: 90px;
+
+}
+
+
+.principle h3 {
+
+  font-size: 24px;
+
+  margin-bottom: 14px;
+
+}
+
+
+.principle p {
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   CAPABILITIES BAND
+===================================================== */
+
+.about-capabilities {
+
+  padding: 140px 0;
+
+  background: var(--navy);
+
+  color: white;
+
+}
+
+
+.about-capabilities-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 120px;
+
+}
+
+
+.about-capabilities h2 {
+
+  font-size:
+    clamp(40px,5vw,68px);
+
+}
+
+
+.about-capabilities h2 span {
+
+  display: block;
+
+  color: rgba(255,255,255,.3);
+
+}
+
+
+.capability-list {
+
+  border-top:
+    1px solid var(--border-dark);
+
+}
+
+
+.capability-list div {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 22px 5px;
+
+  border-bottom:
+    1px solid var(--border-dark);
+
+  font-family: var(--display);
+
+  font-size: 20px;
+
+}
+
+
+.capability-list span {
+
+  color: var(--orange);
+
+  font-size: 12px;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.about-cta {
+
+  padding: 140px 0;
+
+  background: var(--off-white);
+
+  text-align: center;
+
+}
+
+
+.about-cta h2 {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+}
+
+
+.about-cta h2 span {
+
+  color: var(--steel);
+
+}
+
+
+.about-cta p {
+
+  max-width: 500px;
+
+  margin: 25px auto;
+
+}
+
+
+@media(max-width:760px) {
+
+  .about-hero {
+
+    min-height: 650px;
+
+    padding-bottom: 70px;
+
+  }
+
+
+  .about-hero h1 {
+
+    font-size: 49px;
+
+  }
+
+
+  .about-intro,
+  .about-principles,
+  .about-capabilities,
+  .about-cta {
+
+    padding: 90px 0;
+
+  }
+
+
+  .about-intro-grid,
+  .about-capabilities-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+  }
+
+
+  .about-intro h2,
+  .about-capabilities h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  .principles-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .principle {
+
+    min-height: 240px;
+
+  }
+
+
+  .principle-number {
+
+    margin-bottom: 55px;
+
+  }
+
+
+  .capability-list div {
+
+    font-size: 17px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+<div class="container nav-wrap">
+
+<a href="index.html"
+   class="brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="desktop-nav">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="nav-cta">
+
+Discuss a Project
+
+</a>
+
+</nav>
+
+
+<button class="menu-btn"
+        id="menuBtn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div class="mobile-menu"
+     id="mobileMenu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="mobile-menu-cta">
+
+Discuss a Project
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+<div class="container about-hero-content">
+
+<div class="about-kicker">
+About GEPL
+</div>
+
+
+<h1>
+
+Engineering with
+<span>
+purpose.
+</span>
+
+</h1>
+
+
+<p>
+
+A multidisciplinary engineering approach
+built around practical execution, technical
+coordination and project performance.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="about-intro">
+
+<div class="container">
+
+<div class="about-intro-grid">
+
+<div>
+
+<div class="section-label">
+
+<span>01</span>
+
+Who We Are
+
+</div>
+
+
+<h2>
+
+Engineering thinking.
+<span>
+Execution discipline.
+</span>
+
+</h2>
+
+</div>
+
+
+<div class="about-intro-copy">
+
+<p>
+
+GRAPID Engineering Pvt Ltd provides
+integrated engineering solutions across
+multiple technical disciplines.
+
+</p>
+
+
+<p>
+
+Our capabilities span civil and structural
+works, electrical systems, MEP, HVAC,
+fire and safety, ELV, interiors and
+specialized engineering services.
+
+</p>
+
+
+<p>
+
+The company profile, certifications,
+experience and project credentials
+shown on this website are maintained
+through approved company information.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRINCIPLES
+===================================================== -->
+
+<section class="about-principles">
+
+<div class="container">
+
+<div class="about-principles-heading">
+
+<div class="section-label">
+
+<span>02</span>
+
+How We Think
+
+</div>
+
+
+<h2>
+
+The principles behind
+<span>
+better project delivery.</span>
+
+</h2>
+
+</div>
+
+
+<div class="principles-grid">
+
+
+<div class="principle">
+
+<span class="principle-number">
+01
+</span>
+
+<h3>
+Integration
+</h3>
+
+<p>
+
+Different engineering disciplines
+must work together to avoid
+coordination gaps and site delays.
+
+</p>
+
+</div>
+
+
+<div class="principle">
+
+<span class="principle-number">
+02
+</span>
+
+<h3>
+Practicality
+</h3>
+
+<p>
+
+Engineering decisions should work
+not only on drawings, but also
+under real project conditions.
+
+</p>
+
+</div>
+
+
+<div class="principle">
+
+<span class="principle-number">
+03
+</span>
+
+<h3>
+Responsibility
+</h3>
+
+<p>
+
+Quality, safety, coordination and
+delivery require ownership at
+every stage of execution.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAPABILITIES
+===================================================== -->
+
+<section class="about-capabilities">
+
+<div class="container">
+
+<div class="about-capabilities-grid">
+
+<div>
+
+<div class="section-label light">
+
+<span>03</span>
+
+Capabilities
+
+</div>
+
+
+<h2>
+
+Multiple disciplines.
+<span>
+One approach.</span>
+
+</h2>
+
+</div>
+
+
+<div class="capability-list">
+
+<div>
+Civil & Structural
+<span>01</span>
+</div>
+
+<div>
+Electrical
+<span>02</span>
+</div>
+
+<div>
+MEP & HVAC
+<span>03</span>
+</div>
+
+<div>
+Fire & Safety
+<span>04</span>
+</div>
+
+<div>
+ELV & Building Systems
+<span>05</span>
+</div>
+
+<div>
+Interior & Fit-Out
+<span>06</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="about-cta">
+
+<div class="container">
+
+<div class="section-label"
+     style="justify-content:center">
+
+<span>LET'S CONNECT</span>
+
+</div>
+
+
+<h2>
+
+Have an engineering
+<span>
+challenge?</span>
+
+</h2>
+
+
+<p>
+
+Let's discuss your project requirements
+and find the right engineering approach.
+
+</p>
+
+
+<a href="contact.html"
+   class="btn btn-primary">
+
+Discuss Your Project
+
+<span>↗</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-main">
+
+<div class="footer-brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+Integrated engineering solutions
+from concept to commissioning.
+
+</p>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+
+©
+<span id="year"></span>
+GRAPID Engineering Pvt Ltd.
+
+</span>
+
+
+<span>
+Engineering • Execution • Performance
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
