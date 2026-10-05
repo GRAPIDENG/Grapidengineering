@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Projects | GRAPID Engineering Pvt Ltd</title>
+
+<meta
+  name="description"
+  content="Explore selected engineering and infrastructure projects delivered by GRAPID Engineering Pvt Ltd."
+>
+
+<meta name="theme-color"
+      content="#07111f">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+ href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+ rel="stylesheet">
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+<style>
+
+/* =====================================================
+   PROJECT PAGE
+===================================================== */
+
+.projects-hero {
+
+  min-height: 570px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding-bottom: 90px;
+
+  position: relative;
+
+  color: white;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(4,10,18,.96),
+      rgba(4,10,18,.70),
+      rgba(4,10,18,.48)
+    ),
+
+    url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2200&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.projects-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.projects-kicker {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+
+  letter-spacing: .2em;
+
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.6);
+
+}
+
+
+.projects-kicker::before {
+
+  content: "";
+
+  width: 35px;
+
+  height: 1px;
+
+  background: var(--orange);
+
+}
+
+
+.projects-hero h1 {
+
+  max-width: 950px;
+
+  font-size:
+    clamp(52px,7vw,94px);
+
+  letter-spacing: -.065em;
+
+}
+
+
+.projects-hero h1 span {
+
+  display: block;
+
+  color: rgba(255,255,255,.35);
+
+}
+
+
+.projects-hero p {
+
+  max-width: 560px;
+
+  margin-top: 28px;
+
+  font-size: 16px;
+
+  color: rgba(255,255,255,.58);
+
+}
+
+
+/* =====================================================
+   PROJECT CONTENT
+===================================================== */
+
+.projects-content {
+
+  padding: 130px 0;
+
+  background: var(--off-white);
+
+}
+
+
+/* =====================================================
+   FILTER
+===================================================== */
+
+.project-filter {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 70px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  padding-bottom: 25px;
+
+}
+
+
+.project-filter button {
+
+  padding: 10px 17px;
+
+  background: transparent;
+
+  border: 1px solid var(--border);
+
+  color: var(--steel);
+
+  cursor: pointer;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+
+  transition:
+
+    background .3s ease,
+
+    color .3s ease,
+
+    border-color .3s ease;
+
+}
+
+
+.project-filter button:hover,
+.project-filter button.active {
+
+  background: var(--navy);
+
+  color: white;
+
+  border-color: var(--navy);
+
+}
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+.project-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 70px 35px;
+
+}
+
+
+.project-card {
+
+  display: block;
+
+}
+
+
+.project-card-image {
+
+  position: relative;
+
+  height: 480px;
+
+  overflow: hidden;
+
+  background: var(--navy);
+
+}
+
+
+.project-card-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s var(--ease);
+
+}
+
+
+.project-card:hover
+.project-card-image img {
+
+  transform: scale(1.045);
+
+}
+
+
+.project-card-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding: 25px;
+
+  background:
+    linear-gradient(
+      transparent 55%,
+      rgba(4,10,18,.75)
+    );
+
+  opacity: 0;
+
+  transition: opacity .4s ease;
+
+}
+
+
+.project-card:hover
+.project-card-overlay {
+
+  opacity: 1;
+
+}
+
+
+.project-card-overlay span {
+
+  color: white;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+
+}
+
+
+.project-card-arrow {
+
+  width: 45px;
+
+  height: 45px;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--orange);
+
+  color: white;
+
+  font-size: 18px;
+
+}
+
+
+.project-card-info {
+
+  padding: 22px 3px 0;
+
+}
+
+
+.project-card-meta {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 10px;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .13em;
+
+  color: var(--orange);
+
+}
+
+
+.project-card-info h2 {
+
+  font-size:
+    clamp(24px,3vw,36px);
+
+}
+
+
+.project-card-info p {
+
+  margin-top: 10px;
+
+  font-size: 13px;
+
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.projects-empty {
+
+  grid-column: 1 / -1;
+
+  padding: 100px 30px;
+
+  text-align: center;
+
+  border:
+    1px solid var(--border);
+
+}
+
+
+.projects-empty h3 {
+
+  font-size: 30px;
+
+}
+
+
+.projects-empty p {
+
+  max-width: 500px;
+
+  margin: 15px auto;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.projects-cta {
+
+  padding: 130px 0;
+
+  background: var(--navy);
+
+  color: white;
+
+  text-align: center;
+
+}
+
+
+.projects-cta h2 {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+}
+
+
+.projects-cta h2 span {
+
+  color: rgba(255,255,255,.3);
+
+}
+
+
+.projects-cta p {
+
+  max-width: 500px;
+
+  margin: 25px auto;
+
+  color: rgba(255,255,255,.5);
+
+}
+
+
+@media(max-width:760px) {
+
+  .projects-hero {
+
+    min-height: 650px;
+
+    padding-bottom: 70px;
+
+  }
+
+
+  .projects-hero h1 {
+
+    font-size: 49px;
+
+  }
+
+
+  .projects-content {
+
+    padding: 90px 0;
+
+  }
+
+
+  .project-filter {
+
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding-bottom: 18px;
+
+  }
+
+
+  .project-filter button {
+
+    flex-shrink: 0;
+
+  }
+
+
+  .project-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+  }
+
+
+  .project-card-image {
+
+    height: 390px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+<div class="container nav-wrap">
+
+<a href="index.html"
+   class="brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="desktop-nav">
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="services.html">Services</a>
+
+<a href="projects.html">Projects</a>
+
+<a href="industries.html">Industries</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="nav-cta">
+
+Discuss a Project
+
+</a>
+
+</nav>
+
+
+<button class="menu-btn"
+        id="menuBtn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div class="mobile-menu"
+     id="mobileMenu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="mobile-menu-cta">
+
+Discuss a Project
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="projects-hero">
+
+<div class="container projects-hero-content">
+
+<div class="projects-kicker">
+
+Selected Work
+
+</div>
+
+
+<h1>
+
+Projects that
+<span>
+perform.
+</span>
+
+</h1>
+
+
+<p>
+
+A selection of engineering,
+infrastructure and execution work.
+Project information is published
+only after internal approval.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="projects-content">
+
+<div class="container">
+
+
+<div class="section-label">
+
+<span>
+01
+</span>
+
+Project Portfolio
+
+</div>
+
+
+<div class="project-filter"
+     id="projectFilter">
+
+<button
+  class="active"
+  data-filter="all">
+
+All Projects
+
+</button>
+
+</div>
+
+
+<div class="project-grid"
+     id="projectGrid">
+
+<div class="projects-empty">
+
+<h3>
+Project portfolio coming soon.
+</h3>
+
+<p>
+
+Approved GEPL projects will appear here
+automatically when published through
+the CMS.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="projects-cta">
+
+<div class="container">
+
+<div class="section-label light"
+     style="justify-content:center">
+
+<span>
+START A PROJECT
+</span>
+
+</div>
+
+
+<h2>
+
+Your next project
+<span>
+starts here.
+</span>
+
+</h2>
+
+
+<p>
+
+Let's discuss your engineering,
+execution and project requirements.
+
+</p>
+
+
+<a href="contact.html"
+   class="btn btn-primary">
+
+Discuss Your Project
+
+<span>↗</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-main">
+
+<div class="footer-brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+Integrated engineering solutions
+from concept to commissioning.
+
+</p>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+
+©
+<span id="year"></span>
+GRAPID Engineering Pvt Ltd.
+
+</span>
+
+
+<span>
+
+Engineering • Execution • Performance
+
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+/* =====================================================
+   PROJECT CMS
+===================================================== */
+
+let allProjects = [];
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  loadProjects
+);
+
+
+async function loadProjects() {
+
+  try {
+
+    const data =
+      await GEPL.projects();
+
+
+    allProjects =
+      (data || [])
+
+      .filter(item =>
+        String(item.status)
+          .toLowerCase() === "published"
+      )
+
+      .sort(
+        (a,b) =>
+          Number(a.display_order || 999)
+          -
+          Number(b.display_order || 999)
+      );
+
+
+    buildFilters();
+
+    renderProjects("all");
+
+  }
+
+  catch(error) {
+
+    console.warn(
+      "Projects API:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   FILTER BUTTONS
+===================================================== */
+
+function buildFilters() {
+
+  const filter =
+    document.getElementById(
+      "projectFilter"
+    );
+
+
+  if (!filter || !allProjects.length) {
+    return;
+  }
+
+
+  const categories =
+    [
+      ...new Set(
+        allProjects
+          .map(item =>
+            String(
+              item.category || ""
+            ).trim()
+          )
+          .filter(Boolean)
+      )
+    ];
+
+
+  categories.forEach(category => {
+
+    const button =
+      document.createElement(
+        "button"
+      );
+
+
+    button.dataset.filter =
+      category;
+
+
+    button.textContent =
+      category;
+
+
+    filter.appendChild(
+      button
+    );
+
+  });
+
+
+  filter
+    .querySelectorAll("button")
+    .forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          filter
+            .querySelectorAll("button")
+            .forEach(btn =>
+              btn.classList.remove(
+                "active"
+              )
+            );
+
+
+          button.classList.add(
+            "active"
+          );
+
+
+          renderProjects(
+            button.dataset.filter
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+/* =====================================================
+   RENDER
+===================================================== */
+
+function renderProjects(category) {
+
+  const grid =
+    document.getElementById(
+      "projectGrid"
+    );
+
+
+  if (!grid) {
+    return;
+  }
+
+
+  const projects =
+    category === "all"
+
+      ? allProjects
+
+      : allProjects.filter(
+          item =>
+            String(
+              item.category || ""
+            ) === category
+        );
+
+
+  if (!projects.length) {
+
+    grid.innerHTML = `
+
+      <div class="projects-empty">
+
+        <h3>
+          No projects in this category.
+        </h3>
+
+        <p>
+          More approved projects will be
+          added to the portfolio.
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  grid.innerHTML =
+    projects.map(
+      project => {
+
+        const image =
+          project.cover_image ||
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85";
+
+
+        return `
+
+        <a
+          class="project-card"
+          href="project.html?id=${encodeURIComponent(
+            project.id || ""
+          )}"
+        >
+
+          <div class="project-card-image">
+
+            <img
+              src="${escapeAttribute(image)}"
+              alt="${escapeAttribute(
+                project.project_name ||
+                "GEPL Project"
+              )}"
+              loading="lazy"
+            >
+
+
+            <div class="project-card-overlay">
+
+              <span>
+
+                ${escapeHTML(
+                  project.category ||
+                  "Project"
+                )}
+
+              </span>
+
+
+              <span class="project-card-arrow">
+
+                ↗
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-card-info">
+
+            <div class="project-card-meta">
+
+              <span>
+
+                ${escapeHTML(
+                  project.category || ""
+                )}
+
+              </span>
+
+
+              <span>
+
+                ${escapeHTML(
+                  project.location || ""
+                )}
+
+              </span>
+
+            </div>
+
+
+            <h2>
+
+              ${escapeHTML(
+                project.project_name || ""
+              )}
+
+            </h2>
+
+
+            <p>
+
+              ${escapeHTML(
+                project.client || ""
+              )}
+
+            </p>
+
+          </div>
+
+        </a>
+
+        `;
+
+      }
+    ).join("");
+
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
