@@ -1903,3 +1903,249 @@ p {
   }
 
 }
+
+/* =========================================================
+   FLOATING CONTACT ACTIONS
+========================================================= */
+
+.floating-contact {
+
+  position: fixed;
+
+  right: 24px;
+
+  bottom: 24px;
+
+  z-index: 9999;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+}
+
+
+/* =========================================================
+   FLOATING BUTTON
+========================================================= */
+
+.floating-btn {
+
+  position: relative;
+
+  width: 54px;
+
+  height: 54px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.18);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.floating-icon {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-btn {
+
+  background: #25D366;
+
+  color: #fff;
+
+}
+
+
+.whatsapp-btn .floating-icon {
+
+  color: #fff;
+
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-float-btn {
+
+  background: #e57b2c;
+
+  color: #fff;
+
+}
+
+
+.contact-float-btn .floating-icon {
+
+  font-size: 20px;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.floating-btn:hover {
+
+  transform:
+    translateY(-5px)
+    scale(1.04);
+
+  box-shadow:
+    0 16px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.floating-label {
+
+  position: absolute;
+
+  right: 66px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    translateX(8px);
+
+  padding:
+    8px
+    11px;
+
+  background: #07111f;
+
+  color: #fff;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+
+  pointer-events: none;
+
+}
+
+
+.floating-btn:hover .floating-label {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(-50%)
+    translateX(0);
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .floating-contact {
+
+    right: 16px;
+
+    bottom: 16px;
+
+    gap: 10px;
+
+  }
+
+
+  .floating-btn {
+
+    width: 50px;
+
+    height: 50px;
+
+  }
+
+
+  .floating-label {
+
+    display: none;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .floating-btn,
+  .floating-label {
+
+    transition: none;
+
+  }
+
+}
