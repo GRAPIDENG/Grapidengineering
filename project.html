@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Project | GRAPID Engineering Pvt Ltd</title>
+
+<meta
+ name="description"
+ content="Project details and engineering scope delivered by GRAPID Engineering Pvt Ltd."
+>
+
+<meta name="theme-color"
+      content="#07111f">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+ href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+ rel="stylesheet">
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+<style>
+
+/* =====================================================
+   PROJECT DETAIL
+===================================================== */
+
+.project-detail-hero {
+
+  min-height: 700px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding-bottom: 90px;
+
+  color: white;
+
+  background: var(--navy);
+
+}
+
+
+.project-detail-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.project-detail-hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(4,10,18,.94),
+      rgba(4,10,18,.62),
+      rgba(4,10,18,.45)
+    );
+
+}
+
+
+.project-detail-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.project-detail-category {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .2em;
+
+  color: rgba(255,255,255,.55);
+
+}
+
+
+.project-detail-category::before {
+
+  content: "";
+
+  width: 35px;
+
+  height: 1px;
+
+  background: var(--orange);
+
+}
+
+
+.project-detail-title {
+
+  max-width: 1000px;
+
+  font-size:
+    clamp(52px,7vw,96px);
+
+  letter-spacing: -.065em;
+
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.project-meta {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  background: var(--navy);
+
+  color: white;
+
+}
+
+
+.project-meta-item {
+
+  min-height: 145px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid var(--border-dark);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+
+.project-meta-item span {
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .15em;
+
+  color: rgba(255,255,255,.38);
+
+}
+
+
+.project-meta-item strong {
+
+  font-family: var(--display);
+
+  font-size: 17px;
+
+}
+
+
+/* =====================================================
+   PROJECT OVERVIEW
+===================================================== */
+
+.project-overview {
+
+  padding: 140px 0;
+
+  background: var(--off-white);
+
+}
+
+
+.project-overview-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    .8fr;
+
+  gap: 120px;
+
+}
+
+
+.project-overview h2 {
+
+  font-size:
+    clamp(40px,5vw,68px);
+
+}
+
+
+.project-overview h2 span {
+
+  display: block;
+
+  color: var(--steel);
+
+}
+
+
+.project-description {
+
+  padding-top: 10px;
+
+}
+
+
+.project-description p {
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  margin-bottom: 30px;
+
+}
+
+
+.project-scope {
+
+  margin-top: 50px;
+
+  padding-top: 35px;
+
+  border-top:
+    1px solid var(--border);
+
+}
+
+
+.project-scope h3 {
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .14em;
+
+  margin-bottom: 15px;
+
+}
+
+
+.project-scope p {
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.project-gallery {
+
+  padding: 130px 0;
+
+  background: var(--paper);
+
+}
+
+
+.project-gallery-heading {
+
+  margin-bottom: 60px;
+
+}
+
+
+.project-gallery-heading h2 {
+
+  font-size:
+    clamp(40px,5vw,65px);
+
+}
+
+
+.gallery-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap: 18px;
+
+}
+
+
+.gallery-image {
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: var(--navy);
+
+}
+
+
+.gallery-image:nth-child(3n) {
+
+  grid-column:
+    1 / -1;
+
+  height: 600px;
+
+}
+
+
+.gallery-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s var(--ease);
+
+}
+
+
+.gallery-image:hover img {
+
+  transform: scale(1.035);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.project-detail-cta {
+
+  padding: 140px 0;
+
+  background: var(--navy);
+
+  color: white;
+
+  text-align: center;
+
+}
+
+
+.project-detail-cta h2 {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+}
+
+
+.project-detail-cta h2 span {
+
+  color: rgba(255,255,255,.3);
+
+}
+
+
+.project-detail-cta p {
+
+  max-width: 500px;
+
+  margin: 25px auto;
+
+  color: rgba(255,255,255,.5);
+
+}
+
+
+@media(max-width:760px) {
+
+  .project-detail-hero {
+
+    min-height: 650px;
+
+    padding-bottom: 70px;
+
+  }
+
+
+  .project-detail-title {
+
+    font-size: 48px;
+
+  }
+
+
+  .project-meta {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .project-meta-item {
+
+    min-height: 120px;
+
+    padding: 20px;
+
+  }
+
+
+  .project-overview {
+
+    padding: 90px 0;
+
+  }
+
+
+  .project-overview-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+  }
+
+
+  .project-gallery {
+
+    padding: 90px 0;
+
+  }
+
+
+  .gallery-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .gallery-image,
+  .gallery-image:nth-child(3n) {
+
+    grid-column: auto;
+
+    height: 350px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+<div class="container nav-wrap">
+
+<a href="index.html"
+   class="brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="desktop-nav">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="nav-cta">
+
+Discuss a Project
+
+</a>
+
+</nav>
+
+
+<button class="menu-btn"
+        id="menuBtn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div class="mobile-menu"
+     id="mobileMenu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="mobile-menu-cta">
+
+Discuss a Project
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="project-detail-hero">
+
+<div
+  class="project-detail-background"
+  id="projectBackground"
+  style="
+    background-image:
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=85');
+  "
+></div>
+
+
+<div class="container project-detail-content">
+
+<div class="project-detail-category"
+     id="projectCategory">
+
+Project
+
+</div>
+
+
+<h1 class="project-detail-title"
+    id="projectTitle">
+
+Project Details
+
+</h1>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     META
+===================================================== -->
+
+<section class="project-meta">
+
+<div class="project-meta-item">
+
+<span>
+Client
+</span>
+
+<strong id="projectClient">
+—
+</strong>
+
+</div>
+
+
+<div class="project-meta-item">
+
+<span>
+Location
+</span>
+
+<strong id="projectLocation">
+—
+</strong>
+
+</div>
+
+
+<div class="project-meta-item">
+
+<span>
+Start
+</span>
+
+<strong id="projectStart">
+—
+</strong>
+
+</div>
+
+
+<div class="project-meta-item">
+
+<span>
+Completion
+</span>
+
+<strong id="projectCompletion">
+—
+</strong>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OVERVIEW
+===================================================== -->
+
+<section class="project-overview">
+
+<div class="container">
+
+<div class="project-overview-grid">
+
+<div>
+
+<div class="section-label">
+
+<span>
+01
+</span>
+
+Project Overview
+
+</div>
+
+
+<h2>
+
+Engineered for
+<span>
+real-world performance.
+</span>
+
+</h2>
+
+</div>
+
+
+<div class="project-description">
+
+<p id="projectDescription">
+
+Approved project information will
+appear here through the GEPL CMS.
+
+</p>
+
+
+<div class="project-scope">
+
+<h3>
+Scope
+</h3>
+
+<p id="projectScope">
+—
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="project-gallery">
+
+<div class="container">
+
+<div class="project-gallery-heading">
+
+<div class="section-label">
+
+<span>
+02
+</span>
+
+Project Gallery
+
+</div>
+
+
+<h2>
+Project in focus.
+</h2>
+
+</div>
+
+
+<div class="gallery-grid"
+     id="galleryGrid">
+
+<div class="gallery-image">
+
+<img
+src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=85"
+alt="GEPL project"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="project-detail-cta">
+
+<div class="container">
+
+<div class="section-label light"
+     style="justify-content:center">
+
+<span>
+YOUR PROJECT
+</span>
+
+</div>
+
+
+<h2>
+
+Let's engineer
+<span>
+what's next.
+</span>
+
+</h2>
+
+
+<p>
+
+Have a project that requires
+integrated engineering expertise?
+
+</p>
+
+
+<a href="contact.html"
+   class="btn btn-primary">
+
+Discuss Your Project
+
+<span>↗</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-main">
+
+<div class="footer-brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+Integrated engineering solutions
+from concept to commissioning.
+
+</p>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+
+©
+<span id="year"></span>
+GRAPID Engineering Pvt Ltd.
+
+</span>
+
+
+<span>
+Engineering • Execution • Performance
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+/* =====================================================
+   PROJECT DETAIL CMS
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  loadProject
+);
+
+
+async function loadProject() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  const id =
+    params.get("id");
+
+
+  if (!id) {
+    return;
+  }
+
+
+  try {
+
+    const project =
+      await GEPL.project(id);
+
+
+    if (!project) {
+
+      console.warn(
+        "Project not found."
+      );
+
+      return;
+
+    }
+
+
+    /* -----------------------------------------------
+       BASIC DATA
+    ----------------------------------------------- */
+
+    setText(
+      "projectTitle",
+      project.project_name
+    );
+
+
+    setText(
+      "projectCategory",
+      project.category ||
+      "Project"
+    );
+
+
+    setText(
+      "projectClient",
+      project.client
+    );
+
+
+    setText(
+      "projectLocation",
+      project.location
+    );
+
+
+    setText(
+      "projectStart",
+      project.start_date
+    );
+
+
+    setText(
+      "projectCompletion",
+      project.completion_date
+    );
+
+
+    setText(
+      "projectDescription",
+      project.description
+    );
+
+
+    setText(
+      "projectScope",
+      project.scope
+    );
+
+
+    /* -----------------------------------------------
+       COVER IMAGE
+    ----------------------------------------------- */
+
+    if (project.cover_image) {
+
+      const background =
+        document.getElementById(
+          "projectBackground"
+        );
+
+
+      background.style.backgroundImage =
+        `url("${escapeAttribute(
+          project.cover_image
+        )}")`;
+
+    }
+
+
+    /* -----------------------------------------------
+       GALLERY
+    ----------------------------------------------- */
+
+    if (project.gallery) {
+
+      const gallery =
+        String(project.gallery)
+          .split(/[,\n]+/)
+          .map(item =>
+            item.trim()
+          )
+          .filter(Boolean);
+
+
+      if (gallery.length) {
+
+        const grid =
+          document.getElementById(
+            "galleryGrid"
+          );
+
+
+        grid.innerHTML =
+          gallery.map(
+            (image,index) => `
+
+              <div class="gallery-image">
+
+                <img
+                  src="${escapeAttribute(image)}"
+                  alt="${escapeAttribute(
+                    project.project_name ||
+                    "GEPL Project"
+                  )} — image ${index + 1}"
+                  loading="lazy"
+                >
+
+              </div>
+
+            `
+          ).join("");
+
+      }
+
+    }
+
+
+  }
+
+  catch(error) {
+
+    console.warn(
+      "Project API:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   HELPERS
+===================================================== */
+
+function setText(id,value) {
+
+  const element =
+    document.getElementById(id);
+
+
+  if (
+    element &&
+    value
+  ) {
+
+    element.textContent =
+      value;
+
+  }
+
+}
+
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
