@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Testimonials | Grapid Engineering Pvt Ltd</title>
+
+  <meta
+    name="description"
+    content="Client testimonials and feedback for Grapid Engineering Pvt Ltd."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    .inner-hero {
+      min-height: 52vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 150px 0 80px;
+
+      background:
+        linear-gradient(180deg, rgba(7,17,31,.15), rgba(7,17,31,.95)),
+        url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2200&q=85")
+        center/cover;
+
+      color: #fff;
+    }
+
+    .inner-hero h1 {
+      max-width: 900px;
+      margin: 16px 0;
+      font-size: clamp(46px, 7vw, 92px);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+
+    .inner-hero p {
+      max-width: 700px;
+      color: rgba(255,255,255,.72);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .testimonial-intro {
+      max-width: 850px;
+      margin-bottom: 70px;
+    }
+
+    .testimonial-intro h2 {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+      margin: 15px 0 20px;
+    }
+
+    .testimonial-intro p {
+      color: #64748b;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      padding: 45px;
+      background: #f4f6f8;
+      border: 1px solid #dbe2ea;
+      position: relative;
+    }
+
+    .quote-mark {
+      font-family: Georgia, serif;
+      font-size: 75px;
+      line-height: .6;
+      color: #e57b2c;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-text {
+      font-family: "Manrope", sans-serif;
+      font-size: 21px;
+      line-height: 1.65;
+      color: #07111f;
+    }
+
+    .testimonial-person {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #d2d9e1;
+    }
+
+    .testimonial-name {
+      font-weight: 800;
+      color: #07111f;
+    }
+
+    .testimonial-role {
+      margin-top: 5px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .testimonial-photo {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-empty {
+      grid-column: 1 / -1;
+      padding: 100px 30px;
+      text-align: center;
+      border: 1px solid #dbe2ea;
+
+      background:
+        linear-gradient(rgba(7,17,31,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7,17,31,.025) 1px, transparent 1px);
+
+      background-size: 30px 30px;
+    }
+
+    .testimonial-empty-mark {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 25px;
+      border: 1px solid #cbd5e1;
+      display: grid;
+      place-items: center;
+      font-family: "Manrope";
+      font-weight: 800;
+      color: #e57b2c;
+    }
+
+    .testimonial-empty h3 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-empty p {
+      max-width: 600px;
+      margin: auto;
+      color: #64748b;
+      line-height: 1.7;
+    }
+
+    .testimonial-cta {
+      margin-top: 100px;
+      padding: 70px;
+      background: #07111f;
+      color: #fff;
+      text-align: center;
+    }
+
+    .testimonial-cta h2 {
+      max-width: 750px;
+      margin: 0 auto 25px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    .testimonial-cta p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,.65);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 800px) {
+
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-cta {
+        padding: 50px 25px;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .inner-hero {
+        min-height: 60vh;
+        padding: 130px 0 60px;
+      }
+
+      .testimonial-card {
+        padding: 30px;
+      }
+
+      .testimonial-text {
+        font-size: 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header" id="siteHeader">
+
+  <div class="container nav-wrap">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-mark">GE</span>
+
+      <span class="brand-text">
+        <strong>GRAPID</strong>
+        <small>ENGINEERING PVT LTD</small>
+      </span>
+
+    </a>
+
+
+    <button class="menu-toggle" id="menuToggle">
+
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav class="main-nav" id="mainNav">
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="industries.html">Industries</a>
+      <a href="clients.html">Clients</a>
+
+      <a href="contact.html" class="nav-cta">
+        Let's Talk <span>↗</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<section class="inner-hero">
+
+  <div class="container">
+
+    <div class="eyebrow light">
+      CLIENT VOICE
+    </div>
+
+    <h1>
+      What our partners say.
+    </h1>
+
+    <p>
+      The strongest measure of engineering performance is the confidence
+      clients have in the people delivering it.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <div class="container">
+
+
+    <div class="testimonial-intro reveal">
+
+      <div class="eyebrow">
+        TESTIMONIALS
+      </div>
+
+      <h2>
+        Trust is earned through
+        <span class="accent">delivery.</span>
+      </h2>
+
+      <p>
+        Verified client feedback will be presented here to give future
+        partners a clear view of the GEPL project experience.
+      </p>
+
+    </div>
+
+
+    <div class="testimonial-grid reveal" id="testimonialGrid">
+
+      <div class="testimonial-empty">
+
+        <div class="testimonial-empty-mark">
+          “
+        </div>
+
+        <h3>
+          Testimonials coming soon.
+        </h3>
+
+        <p>
+          Approved client testimonials will appear here once they are
+          added to the GEPL CMS.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="testimonial-cta reveal">
+
+      <h2>
+        Let's build something
+        worth talking about.
+      </h2>
+
+      <p>
+        Have an engineering requirement, construction project or
+        technical challenge? Let's discuss it.
+      </p>
+
+      <a href="contact.html" class="btn btn-primary">
+        Start a Conversation
+        <span>↗</span>
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-main">
+
+    <div>
+
+      <a href="index.html" class="brand footer-brand">
+
+        <span class="brand-mark">GE</span>
+
+        <span class="brand-text">
+          <strong>GRAPID</strong>
+          <small>ENGINEERING PVT LTD</small>
+        </span>
+
+      </a>
+
+      <p class="footer-description">
+        Integrated engineering solutions across Civil, Electrical,
+        MEP, HVAC, Fire & Safety and specialized services.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <div>
+
+        <span class="footer-title">Explore</span>
+
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+
+      </div>
+
+
+      <div>
+
+        <span class="footer-title">Connect</span>
+
+        <a href="clients.html">Clients</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="footerYear"></span>
+      Grapid Engineering Pvt Ltd.
+    </span>
+
+    <span>
+      Engineering. Execution. Excellence.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="config/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+  const grid = document.getElementById("testimonialGrid");
+
+  try {
+
+    const testimonials = await GEPL.testimonials();
+
+    if (!Array.isArray(testimonials) || !testimonials.length) {
+      return;
+    }
+
+    grid.innerHTML = testimonials.map(item => {
+
+      const photo = item.photo
+        ? `
+          <img
+            class="testimonial-photo"
+            src="${escapeAttribute(item.photo)}"
+            alt="${escapeAttribute(item.client_name || "Client")}"
+            loading="lazy"
+          >
+        `
+        : "";
+
+      return `
+
+        <article class="testimonial-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          ${photo}
+
+          <div class="testimonial-text">
+            ${escapeHTML(item.testimonial || "")}
+          </div>
+
+          <div class="testimonial-person">
+
+            <div class="testimonial-name">
+              ${escapeHTML(item.client_name || "")}
+            </div>
+
+            ${
+              item.designation || item.company
+                ? `
+                  <div class="testimonial-role">
+                    ${escapeHTML(item.designation || "")}
+                    ${
+                      item.designation && item.company
+                        ? " · "
+                        : ""
+                    }
+                    ${escapeHTML(item.company || "")}
+                  </div>
+                `
+                : ""
+            }
+
+          </div>
+
+        </article>
+
+      `;
+
+    }).join("");
+
+  } catch (error) {
+
+    console.error("Testimonials load error:", error);
+
+  }
+
+});
+
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
+
+}
+
+</script>
+
+
+</body>
+
+</html>
