@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Contact | Grapid Engineering Pvt Ltd</title>
+
+  <meta
+    name="description"
+    content="Contact Grapid Engineering Pvt Ltd for engineering, MEP, electrical, civil, HVAC, fire and safety, and specialized project requirements."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link rel="canonical" href="https://grapidengineering.com/contact.html">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
+
+  <style>
+
+    /* =========================================
+       CONTACT PAGE
+    ========================================= */
+
+    .contact-hero {
+
+      min-height: 58vh;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding:
+        150px
+        0
+        80px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7,17,31,.15),
+          rgba(7,17,31,.96)
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=85")
+        center / cover;
+
+    }
+
+
+    .contact-hero h1 {
+
+      max-width: 950px;
+
+      margin:
+        16px
+        0
+        20px;
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(
+          46px,
+          7vw,
+          92px
+        );
+
+      line-height: .96;
+
+      letter-spacing: -.055em;
+
+    }
+
+
+    .contact-hero p {
+
+      max-width: 720px;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .72
+        );
+
+      font-size: 18px;
+
+      line-height: 1.75;
+
+    }
+
+
+    /* =========================================
+       CONTACT LAYOUT
+    ========================================= */
+
+    .contact-section {
+
+      padding:
+        110px
+        0;
+
+    }
+
+
+    .contact-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        .85fr
+        1.15fr;
+
+      gap: 80px;
+
+      align-items: start;
+
+    }
+
+
+    /* =========================================
+       CONTACT INFORMATION
+    ========================================= */
+
+    .contact-info {
+
+      position: sticky;
+
+      top: 120px;
+
+    }
+
+
+    .contact-info h2 {
+
+      max-width: 600px;
+
+      margin:
+        15px
+        0
+        20px;
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(
+          34px,
+          4vw,
+          58px
+        );
+
+      line-height: 1.04;
+
+      letter-spacing: -.045em;
+
+    }
+
+
+    .contact-intro {
+
+      max-width: 520px;
+
+      color: #64748b;
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .contact-details {
+
+      margin-top: 45px;
+
+      border-top:
+        1px solid #dbe2ea;
+
+    }
+
+
+    .contact-detail {
+
+      display: grid;
+
+      grid-template-columns:
+        45px
+        1fr;
+
+      gap: 20px;
+
+      padding:
+        25px
+        0;
+
+      border-bottom:
+        1px solid #dbe2ea;
+
+    }
+
+
+    .contact-icon {
+
+      width: 42px;
+
+      height: 42px;
+
+      display: grid;
+
+      place-items: center;
+
+      border:
+        1px solid #dbe2ea;
+
+      color: #e57b2c;
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+    }
+
+
+    .contact-detail-label {
+
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #94a3b8;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .contact-detail a,
+    .contact-detail span {
+
+      color: #07111f;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .contact-detail a {
+
+      text-decoration: none;
+
+      transition: color .25s ease;
+
+    }
+
+
+    .contact-detail a:hover {
+
+      color: #e57b2c;
+
+    }
+
+
+    /* =========================================
+       FORM CARD
+    ========================================= */
+
+    .contact-form-card {
+
+      padding: 50px;
+
+      background: #07111f;
+
+      color: #fff;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+    .contact-form-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          rgba(255,255,255,.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.035) 1px,
+          transparent 1px
+        );
+
+      background-size: 34px 34px;
+
+      pointer-events: none;
+
+    }
+
+
+    .contact-form-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+    }
+
+
+    .contact-form-card h2 {
+
+      margin:
+        12px
+        0
+        12px;
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(
+          30px,
+          4vw,
+          48px
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -.04em;
+
+    }
+
+
+    .contact-form-card > div > p {
+
+      max-width: 600px;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .62
+        );
+
+      line-height: 1.7;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    /* =========================================
+       FORM
+    ========================================= */
+
+    .contact-form {
+
+      display: grid;
+
+      gap: 20px;
+
+    }
+
+
+    .form-row {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      gap: 18px;
+
+    }
+
+
+    .form-field {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 8px;
+
+    }
+
+
+    .form-field label {
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .72
+        );
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: .08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+
+      width: 100%;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .14
+        );
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .055
+        );
+
+      color: #fff;
+
+      padding:
+        15px
+        16px;
+
+      outline: none;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 15px;
+
+      transition:
+        border-color .25s ease,
+        background .25s ease;
+
+    }
+
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .35
+        );
+
+    }
+
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+
+      border-color:
+        rgba(
+          229,
+          123,
+          44,
+          .8
+        );
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .08
+        );
+
+    }
+
+
+    .form-field select {
+
+      appearance: none;
+
+      background-image:
+        linear-gradient(45deg, transparent 50%, #aaa 50%),
+        linear-gradient(135deg, #aaa 50%, transparent 50%);
+
+      background-position:
+        calc(100% - 20px) 19px,
+        calc(100% - 15px) 19px;
+
+      background-size:
+        5px 5px,
+        5px 5px;
+
+      background-repeat: no-repeat;
+
+    }
+
+
+    .form-field select option {
+
+      background: #07111f;
+
+      color: #fff;
+
+    }
+
+
+    .form-field textarea {
+
+      min-height: 150px;
+
+      resize: vertical;
+
+    }
+
+
+    .form-required {
+
+      color: #e57b2c;
+
+    }
+
+
+    .honeypot {
+
+      position: absolute !important;
+
+      left: -9999px !important;
+
+      opacity: 0 !important;
+
+      height: 0 !important;
+
+      width: 0 !important;
+
+      pointer-events: none !important;
+
+    }
+
+
+    .form-submit {
+
+      margin-top: 10px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .form-submit button {
+
+      border: none;
+
+      cursor: pointer;
+
+      font-family:
+        "DM Sans",
+        sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    .form-note {
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .42
+        );
+
+      font-size: 12px;
+
+    }
+
+
+    /* =========================================
+       FORM STATUS
+    ========================================= */
+
+    .form-status {
+
+      display: none;
+
+      padding:
+        14px
+        16px;
+
+      margin-bottom: 10px;
+
+      font-size: 14px;
+
+      line-height: 1.5;
+
+    }
+
+
+    .form-status.success {
+
+      display: block;
+
+      background:
+        rgba(
+          34,
+          197,
+          94,
+          .12
+        );
+
+      border:
+        1px solid
+        rgba(
+          34,
+          197,
+          94,
+          .35
+        );
+
+      color: #86efac;
+
+    }
+
+
+    .form-status.error {
+
+      display: block;
+
+      background:
+        rgba(
+          239,
+          68,
+          68,
+          .12
+        );
+
+      border:
+        1px solid
+        rgba(
+          239,
+          68,
+          68,
+          .35
+        );
+
+      color: #fca5a5;
+
+    }
+
+
+    /* =========================================
+       WHATSAPP
+    ========================================= */
+
+    .contact-actions {
+
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 30px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .contact-action {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding:
+        12px
+        16px;
+
+      border:
+        1px solid #dbe2ea;
+
+      color: #07111f;
+
+      text-decoration: none;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      transition: .25s ease;
+
+    }
+
+
+    .contact-action:hover {
+
+      border-color: #e57b2c;
+
+      color: #e57b2c;
+
+      transform: translateY(-2px);
+
+    }
+
+
+    /* =========================================
+       OFFICE BLOCK
+    ========================================= */
+
+    .office-section {
+
+      padding:
+        0
+        0
+        110px;
+
+    }
+
+
+    .office-card {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      background: #f3f5f7;
+
+    }
+
+
+    .office-copy {
+
+      padding: 65px;
+
+    }
+
+
+    .office-copy h2 {
+
+      margin:
+        15px
+        0
+        20px;
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:
+        clamp(
+          34px,
+          4vw,
+          52px
+        );
+
+      line-height: 1.05;
+
+      letter-spacing: -.04em;
+
+    }
+
+
+    .office-copy p {
+
+      max-width: 500px;
+
+      color: #64748b;
+
+      line-height: 1.8;
+
+    }
+
+
+    .office-map {
+
+      min-height: 430px;
+
+      background:
+
+        linear-gradient(
+          rgba(7,17,31,.78),
+          rgba(7,17,31,.78)
+        ),
+
+        url("https://images.unsplash.com/photo-1524666041070-9e9c7f4e5d2c?auto=format&fit=crop&w=1600&q=80")
+        center / cover;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 40px;
+
+    }
+
+
+    .office-map-inner {
+
+      max-width: 400px;
+
+      color: #fff;
+
+    }
+
+
+    .office-map-inner h3 {
+
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size: 28px;
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .office-map-inner p {
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .65
+        );
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 1000px) {
+
+      .contact-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+      }
+
+
+      .contact-info {
+
+        position: static;
+
+      }
+
+
+      .office-card {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .contact-hero {
+
+        min-height: 62vh;
+
+        padding:
+          130px
+          0
+          60px;
+
+      }
+
+
+      .contact-section {
+
+        padding:
+          75px
+          0;
+
+      }
+
+
+      .form-row {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .contact-form-card {
+
+        padding: 30px 22px;
+
+      }
+
+
+      .office-copy {
+
+        padding: 40px 25px;
+
+      }
+
+
+      .office-map {
+
+        min-height: 350px;
+
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .contact-action {
+
+        transition: none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header
+  class="site-header"
+  id="siteHeader"
+>
+
+  <div class="container nav-wrap">
+
+
+    <a
+      href="index.html"
+      class="brand"
+    >
+
+      <span class="brand-mark">
+        GE
+      </span>
+
+      <span class="brand-text">
+
+        <strong>
+          GRAPID
+        </strong>
+
+        <small>
+          ENGINEERING PVT LTD
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+    >
+
+      <span></span>
+
+      <span></span>
+
+    </button>
+
+
+    <nav
+      class="main-nav"
+      id="mainNav"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="projects.html">
+        Projects
+      </a>
+
+      <a href="industries.html">
+        Industries
+      </a>
+
+      <a href="clients.html">
+        Clients
+      </a>
+
+      <a href="team.html">
+        Leadership
+      </a>
+
+      <a href="testimonials.html">
+        Testimonials
+      </a>
+
+      <a
+        href="contact.html"
+        class="nav-cta active"
+      >
+        Let's Talk
+        <span>↗</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<main>
+
+
+<section class="contact-hero">
+
+  <div class="container">
+
+    <div class="eyebrow light">
+      CONTACT GEPL
+    </div>
+
+    <h1>
+      Let's discuss
+      your next project.
+    </h1>
+
+    <p>
+      Tell us what you're building, improving or solving.
+      Our team can discuss the engineering requirements,
+      project scope and the right way forward.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT FORM
+========================================= -->
+
+<section class="contact-section">
+
+  <div class="container">
+
+    <div class="contact-layout">
+
+
+      <!-- INFORMATION -->
+
+      <div class="contact-info reveal">
+
+        <div class="eyebrow">
+          GET IN TOUCH
+        </div>
+
+        <h2>
+          Engineering starts
+          with a conversation.
+        </h2>
+
+        <p class="contact-intro">
+          Whether you have a new project, an ongoing requirement
+          or a technical challenge, share the details with us.
+        </p>
+
+
+        <div class="contact-details">
+
+
+          <!-- ADDRESS -->
+
+          <div class="contact-detail">
+
+            <div class="contact-icon">
+              01
+            </div>
+
+            <div>
+
+              <span class="contact-detail-label">
+                Office
+              </span>
+
+              <span>
+                H.No. 1-115/1/S.R/504-5th Floor,<br>
+                Sri Rama Residency,<br>
+                White Fields, Kondapur,<br>
+                Hyderabad, Telangana - 500081,<br>
+                India
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <div class="contact-detail">
+
+            <div class="contact-icon">
+              02
+            </div>
+
+            <div>
+
+              <span class="contact-detail-label">
+                Phone
+              </span>
+
+              <span>
+                Company phone number will be published
+                after verification.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="contact-detail">
+
+            <div class="contact-icon">
+              03
+            </div>
+
+            <div>
+
+              <span class="contact-detail-label">
+                Email
+              </span>
+
+              <span>
+                Company email will be published
+                after verification.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-actions">
+
+          <a
+            href="https://wa.me/?text=Hello%20Grapid%20Engineering%2C%20I%20would%20like%20to%20discuss%20an%20engineering%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-action"
+          >
+            WhatsApp
+            <span>↗</span>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="contact-form-card reveal">
+
+        <div class="contact-form-inner">
+
+          <div class="eyebrow light">
+            PROJECT ENQUIRY
+          </div>
+
+          <h2>
+            Tell us about
+            your requirement.
+          </h2>
+
+          <p>
+            The more information you provide, the better we can
+            understand your requirement.
+          </p>
+
+
+          <div
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+
+          <form
+            id="contactForm"
+            class="contact-form"
+            novalidate
+          >
+
+
+            <!-- HONEYPOT -->
+
+            <input
+              type="text"
+              name="website"
+              class="honeypot"
+              tabindex="-1"
+              autocomplete="off"
+            >
+
+
+            <!-- NAME / COMPANY -->
+
+            <div class="form-row">
+
+              <div class="form-field">
+
+                <label for="name">
+                  Name
+                  <span class="form-required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  maxlength="100"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="company">
+                  Company
+                </label>
+
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Company name"
+                  maxlength="150"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- EMAIL / PHONE -->
+
+            <div class="form-row">
+
+              <div class="form-field">
+
+                <label for="email">
+                  Email
+                  <span class="form-required">*</span>
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@company.com"
+                  maxlength="150"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-field">
+
+                <label for="phone">
+                  Phone
+                  <span class="form-required">*</span>
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+91 XXXXX XXXXX"
+                  maxlength="20"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- SERVICE -->
+
+            <div class="form-field">
+
+              <label for="service">
+                Service Required
+              </label>
+
+              <select
+                id="service"
+                name="service"
+              >
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option value="Civil & Structural">
+                  Civil & Structural
+                </option>
+
+                <option value="Electrical Engineering">
+                  Electrical Engineering
+                </option>
+
+                <option value="MEP & HVAC">
+                  MEP & HVAC
+                </option>
+
+                <option value="Fire & Safety">
+                  Fire & Safety
+                </option>
+
+                <option value="ELV & Building Systems">
+                  ELV & Building Systems
+                </option>
+
+                <option value="Interior & Fit-Out">
+                  Interior & Fit-Out
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- PROJECT DETAILS -->
+
+            <div class="form-field">
+
+              <label for="project_details">
+                Project Details
+              </label>
+
+              <textarea
+                id="project_details"
+                name="project_details"
+                placeholder="Tell us about your project, location, scope, timeline or technical requirement..."
+                maxlength="5000"
+              ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <div class="form-submit">
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="submitButton"
+              >
+
+                Send Enquiry
+                <span>↗</span>
+
+              </button>
+
+
+              <span class="form-note">
+                Your information is used only to respond
+                to your enquiry.
+              </span>
+
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     OFFICE
+========================================= -->
+
+<section class="office-section">
+
+  <div class="container">
+
+    <div class="office-card reveal">
+
+
+      <div class="office-copy">
+
+        <div class="eyebrow">
+          OUR OFFICE
+        </div>
+
+        <h2>
+          Hyderabad
+          headquarters.
+        </h2>
+
+        <p>
+          Our office is located at White Fields, Kondapur,
+          Hyderabad. Visit us to discuss your engineering
+          requirements and project opportunities.
+        </p>
+
+        <br>
+
+        <p>
+
+          <strong>
+            H.No. 1-115/1/S.R/504-5th Floor
+          </strong>
+          <br>
+
+          Sri Rama Residency
+          <br>
+
+          White Fields, Kondapur
+          <br>
+
+          Hyderabad, Telangana - 500081
+          <br>
+
+          India
+
+        </p>
+
+      </div>
+
+
+      <div class="office-map">
+
+        <div class="office-map-inner">
+
+          <div class="eyebrow light">
+            HYDERABAD · TELANGANA
+          </div>
+
+          <h3>
+            White Fields, Kondapur
+          </h3>
+
+          <p>
+            Official Google Maps location can be linked here
+            once the verified company location URL is provided.
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+  <div class="container footer-main">
+
+
+    <div>
+
+      <a
+        href="index.html"
+        class="brand footer-brand"
+      >
+
+        <span class="brand-mark">
+          GE
+        </span>
+
+        <span class="brand-text">
+
+          <strong>
+            GRAPID
+          </strong>
+
+          <small>
+            ENGINEERING PVT LTD
+          </small>
+
+        </span>
+
+      </a>
+
+
+      <p class="footer-description">
+
+        Integrated engineering solutions across
+        Civil, Electrical, MEP, HVAC, Fire & Safety
+        and specialized services.
+
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+
+      <div>
+
+        <span class="footer-title">
+          Explore
+        </span>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="industries.html">
+          Industries
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <span class="footer-title">
+          Connect
+        </span>
+
+        <a href="clients.html">
+          Clients
+        </a>
+
+        <a href="team.html">
+          Leadership
+        </a>
+
+        <a href="testimonials.html">
+          Testimonials
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      ©
+      <span id="footerYear"></span>
+      Grapid Engineering Pvt Ltd.
+    </span>
+
+    <span>
+      Engineering. Execution. Excellence.
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================
+     SCRIPTS
+========================================= -->
+
+<script src="config/config.js"></script>
+
+<script src="js/api.js"></script>
+
+<script src="js/app.js"></script>
+
+
+<script>
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    const form =
+      document.getElementById(
+        "contactForm"
+      );
+
+    const status =
+      document.getElementById(
+        "formStatus"
+      );
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+
+    if (!form) return;
+
+
+    form.addEventListener(
+      "submit",
+      async (event) => {
+
+        event.preventDefault();
+
+
+        status.className =
+          "form-status";
+
+        status.textContent =
+          "";
+
+
+        /* =====================================
+           READ VALUES
+        ===================================== */
+
+        const formData =
+          new FormData(form);
+
+
+        const payload = {
+
+          name:
+            String(
+              formData.get("name") || ""
+            ).trim(),
+
+          email:
+            String(
+              formData.get("email") || ""
+            ).trim(),
+
+          phone:
+            String(
+              formData.get("phone") || ""
+            ).trim(),
+
+          company:
+            String(
+              formData.get("company") || ""
+            ).trim(),
+
+          service:
+            String(
+              formData.get("service") || ""
+            ).trim(),
+
+          project_details:
+            String(
+              formData.get("project_details") || ""
+            ).trim(),
+
+          website:
+            String(
+              formData.get("website") || ""
+            ).trim(),
+
+          source:
+            "website"
+
+        };
+
+
+        /* =====================================
+           CLIENT VALIDATION
+        ===================================== */
+
+        if (!payload.name) {
+
+          showError(
+            "Please enter your name."
+          );
+
+          document
+            .getElementById("name")
+            .focus();
+
+          return;
+
+        }
+
+
+        if (
+          !/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            .test(payload.email)
+        ) {
+
+          showError(
+            "Please enter a valid email address."
+          );
+
+          document
+            .getElementById("email")
+            .focus();
+
+          return;
+
+        }
+
+
+        if (
+          !/^[+()\-\.\s\d]{7,20}$/
+            .test(payload.phone)
+        ) {
+
+          showError(
+            "Please enter a valid phone number."
+          );
+
+          document
+            .getElementById("phone")
+            .focus();
+
+          return;
+
+        }
+
+
+        /* =====================================
+           HONEYPOT
+        ===================================== */
+
+        if (payload.website) {
+
+          return;
+
+        }
+
+
+        /* =====================================
+           SUBMIT STATE
+        ===================================== */
+
+        submitButton.disabled = true;
+
+        submitButton.style.opacity = ".6";
+
+        submitButton.innerHTML =
+          "Sending...";
+
+
+        try {
+
+
+          /* ===================================
+             APPS SCRIPT POST
+          =================================== */
+
+          const response =
+            await fetch(
+              GEPL_API_URL +
+              "?action=contact",
+              {
+
+                method: "POST",
+
+                headers: {
+                  "Content-Type":
+                    "text/plain;charset=utf-8"
+                },
+
+                body:
+                  JSON.stringify(payload)
+
+              }
+            );
+
+
+          if (!response.ok) {
+
+            throw new Error(
+              "Request failed."
+            );
+
+          }
+
+
+          const result =
+            await response.json();
+
+
+          if (!result.success) {
+
+            throw new Error(
+              result.error ||
+              "Unable to send enquiry."
+            );
+
+          }
+
+
+          /* ===================================
+             SUCCESS
+          =================================== */
+
+          status.className =
+            "form-status success";
+
+          status.textContent =
+            "Thank you. Your enquiry has been received. Our team will get back to you.";
+
+
+          form.reset();
+
+
+        } catch (error) {
+
+          console.error(
+            "Contact form error:",
+            error
+          );
+
+
+          status.className =
+            "form-status error";
+
+          status.textContent =
+            "We couldn't send your enquiry right now. Please try again or contact us directly.";
+
+        }
+
+
+        submitButton.disabled = false;
+
+        submitButton.style.opacity = "1";
+
+        submitButton.innerHTML =
+          'Send Enquiry <span>↗</span>';
+
+      }
+    );
+
+
+    function showError(message) {
+
+      status.className =
+        "form-status error";
+
+      status.textContent =
+        message;
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+
+</html>
