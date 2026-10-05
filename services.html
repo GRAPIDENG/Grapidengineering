@@ -8,13 +8,16 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Engineering Services | GRAPID Engineering</title>
+  <title>Service | GRAPID Engineering Pvt Ltd</title>
 
-  <meta name="description"
-        content="Explore engineering, MEP, electrical, HVAC, fire protection, ELV, interior and specialized engineering services from GRAPID Engineering Pvt Ltd.">
+  <meta
+    name="description"
+    content="Explore engineering services delivered by GRAPID Engineering Pvt Ltd."
+  >
 
   <meta name="theme-color"
         content="#07111f">
+
 
   <link rel="preconnect"
         href="https://fonts.googleapis.com">
@@ -23,22 +26,27 @@
         href="https://fonts.gstatic.com"
         crossorigin>
 
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet"
-        href="css/style.css">
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+
 
   <style>
 
     /* =====================================================
-       SERVICES PAGE
+       SERVICE DETAIL PAGE
     ===================================================== */
 
-    .inner-hero {
+    .service-detail-hero {
 
-      min-height: 570px;
+      min-height: 680px;
 
       position: relative;
 
@@ -46,31 +54,39 @@
 
       align-items: flex-end;
 
-      padding-bottom: 85px;
+      padding-bottom: 90px;
+
+      color: white;
 
       background:
-
         linear-gradient(
           90deg,
           rgba(4,10,18,.97),
-          rgba(4,10,18,.76),
-          rgba(4,10,18,.55)
-        ),
-
-        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85");
-
-      background-size: cover;
-
-      background-position: center;
-
-      color: white;
+          rgba(4,10,18,.74),
+          rgba(4,10,18,.48)
+        );
 
       overflow: hidden;
 
     }
 
 
-    .inner-hero::after {
+    .service-detail-bg {
+
+      position: absolute;
+
+      inset: 0;
+
+      background-size: cover;
+
+      background-position: center;
+
+      z-index: 0;
+
+    }
+
+
+    .service-detail-hero::after {
 
       content: "";
 
@@ -78,34 +94,19 @@
 
       inset: 0;
 
-      opacity: .12;
-
-      background-image:
-
-        linear-gradient(
-          rgba(255,255,255,.18) 1px,
-          transparent 1px
-        ),
-
+      background:
         linear-gradient(
           90deg,
-          rgba(255,255,255,.18) 1px,
-          transparent 1px
+          rgba(4,10,18,.92),
+          rgba(4,10,18,.55)
         );
 
-      background-size: 80px 80px;
-
-      mask-image:
-        linear-gradient(
-          90deg,
-          black,
-          transparent
-        );
+      z-index: 1;
 
     }
 
 
-    .inner-hero-content {
+    .service-detail-content {
 
       position: relative;
 
@@ -114,7 +115,7 @@
     }
 
 
-    .inner-kicker {
+    .service-detail-kicker {
 
       display: flex;
 
@@ -126,17 +127,19 @@
 
       font-size: 10px;
 
+      font-weight: 700;
+
       text-transform: uppercase;
 
       letter-spacing: .2em;
 
       color:
-        rgba(255,255,255,.6);
+        rgba(255,255,255,.58);
 
     }
 
 
-    .inner-kicker::before {
+    .service-detail-kicker::before {
 
       content: "";
 
@@ -149,7 +152,7 @@
     }
 
 
-    .inner-hero h1 {
+    .service-detail-title {
 
       max-width: 950px;
 
@@ -165,57 +168,58 @@
     }
 
 
-    .inner-hero h1 span {
+    .service-detail-category {
 
-      display: block;
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 9px 13px;
+
+      border:
+        1px solid rgba(255,255,255,.2);
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .15em;
 
       color:
-        rgba(255,255,255,.38);
+        rgba(255,255,255,.55);
 
     }
 
 
-    .inner-hero p {
+    /* =====================================================
+       INTRO
+    ===================================================== */
 
-      max-width: 580px;
+    .service-overview {
 
-      margin-top: 28px;
-
-      color:
-        rgba(255,255,255,.58);
-
-      font-size: 16px;
-
-    }
-
-
-    /* SERVICES LIST */
-
-    .services-page {
-
-      padding: 130px 0;
+      padding: 140px 0;
 
       background: var(--off-white);
 
     }
 
 
-    .services-page-intro {
+    .service-overview-grid {
 
       display: grid;
 
       grid-template-columns:
         1fr
-        .8fr;
+        .85fr;
 
-      gap: 100px;
-
-      margin-bottom: 90px;
+      gap: 120px;
 
     }
 
 
-    .services-page-intro h2 {
+    .service-overview h2 {
+
+      max-width: 700px;
 
       font-size:
         clamp(
@@ -227,7 +231,7 @@
     }
 
 
-    .services-page-intro h2 span {
+    .service-overview h2 span {
 
       display: block;
 
@@ -236,147 +240,176 @@
     }
 
 
-    .services-page-intro p {
+    .service-description {
 
-      max-width: 460px;
-
-      font-size: 15px;
-
-      line-height: 1.8;
+      padding-top: 10px;
 
     }
 
 
-    #allServices {
+    .service-description p {
 
-      border-top:
-        1px solid var(--border);
+      font-size: 16px;
 
-    }
+      line-height: 1.85;
 
-
-    .service-row {
-
-      display: grid;
-
-      grid-template-columns:
-        90px
-        1fr
-        .65fr
-        80px;
-
-      gap: 30px;
-
-      align-items: center;
-
-      min-height: 180px;
-
-      padding: 30px 5px;
-
-      border-bottom:
-        1px solid var(--border);
-
-      transition:
-
-        padding .4s var(--ease),
-
-        background .4s ease;
+      margin-bottom: 20px;
 
     }
 
 
-    .service-row:hover {
+    /* =====================================================
+       FEATURES
+    ===================================================== */
 
-      padding-left: 25px;
+    .service-features {
 
-      padding-right: 25px;
+      padding: 140px 0;
 
-      background:
-        rgba(7,17,31,.025);
-
-    }
-
-
-    .service-number {
-
-      font-size: 11px;
-
-      color: var(--orange);
-
-      font-weight: 700;
-
-      letter-spacing: .1em;
+      background: var(--paper);
 
     }
 
 
-    .service-row h3 {
+    .service-features-heading {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      gap: 40px;
+
+      margin-bottom: 70px;
+
+    }
+
+
+    .service-features-heading h2 {
 
       font-size:
         clamp(
-          24px,
-          3vw,
-          35px
+          40px,
+          5vw,
+          65px
         );
 
     }
 
 
-    .service-row p {
+    .service-features-heading p {
 
-      font-size: 13px;
+      max-width: 390px;
+
+      font-size: 14px;
 
       line-height: 1.7;
 
     }
 
 
-    .service-arrow {
-
-      width: 48px;
-
-      height: 48px;
-
-      border: 1px solid var(--border);
+    .feature-grid {
 
       display: grid;
 
-      place-items: center;
+      grid-template-columns:
+        repeat(3,1fr);
 
-      font-size: 17px;
+      border-top:
+        1px solid var(--border);
+
+      border-left:
+        1px solid var(--border);
+
+    }
+
+
+    .feature-card {
+
+      min-height: 230px;
+
+      padding: 30px;
+
+      border-right:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
 
       transition:
-
-        background .3s ease,
-
-        color .3s ease,
-
-        transform .3s ease;
+        background .35s ease;
 
     }
 
 
-    .service-row:hover
-    .service-arrow {
+    .feature-card:hover {
 
-      background: var(--orange);
-
-      color: white;
-
-      border-color:
-        var(--orange);
-
-      transform:
-        translate(4px,-4px);
+      background: white;
 
     }
 
 
-    /* CTA */
+    .feature-number {
 
-    .services-cta {
+      display: block;
 
-      padding: 120px 0;
+      margin-bottom: 65px;
+
+      color: var(--orange);
+
+      font-size: 10px;
+
+      font-weight: 700;
+
+    }
+
+
+    .feature-card h3 {
+
+      font-size: 20px;
+
+    }
+
+
+    /* =====================================================
+       IMAGE
+    ===================================================== */
+
+    .service-showcase {
+
+      padding: 0;
+
+      background: var(--navy);
+
+    }
+
+
+    .service-showcase-image {
+
+      height: 650px;
+
+      overflow: hidden;
+
+    }
+
+
+    .service-showcase-image img {
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .service-detail-cta {
+
+      padding: 140px 0;
 
       background: var(--navy);
 
@@ -387,12 +420,11 @@
     }
 
 
-    .services-cta h2 {
+    .service-detail-cta h2 {
 
-      max-width: 850px;
+      max-width: 900px;
 
-      margin:
-        0 auto;
+      margin: 0 auto;
 
       font-size:
         clamp(
@@ -404,7 +436,7 @@
     }
 
 
-    .services-cta h2 span {
+    .service-detail-cta h2 span {
 
       color:
         rgba(255,255,255,.35);
@@ -412,12 +444,11 @@
     }
 
 
-    .services-cta p {
+    .service-detail-cta p {
 
-      max-width: 500px;
+      max-width: 520px;
 
-      margin:
-        25px auto 0;
+      margin: 25px auto;
 
       color:
         rgba(255,255,255,.5);
@@ -425,9 +456,30 @@
     }
 
 
+    /* =====================================================
+       LOADING
+    ===================================================== */
+
+    .service-loading {
+
+      min-height: 400px;
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--steel);
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
     @media(max-width:760px) {
 
-      .inner-hero {
+      .service-detail-hero {
 
         min-height: 650px;
 
@@ -436,64 +488,85 @@
       }
 
 
-      .inner-hero h1 {
+      .service-detail-title {
 
-        font-size: 48px;
+        font-size: 49px;
 
       }
 
 
-      .services-page {
+      .service-overview {
 
         padding: 90px 0;
 
       }
 
 
-      .services-page-intro {
+      .service-overview-grid {
 
         grid-template-columns: 1fr;
 
-        gap: 25px;
-
-        margin-bottom: 60px;
+        gap: 45px;
 
       }
 
 
-      .services-page-intro h2 {
+      .service-overview h2 {
 
         font-size: 43px;
 
       }
 
 
-      .service-row {
+      .service-features {
 
-        grid-template-columns:
-          40px
-          1fr
-          45px;
-
-        gap: 15px;
-
-        min-height: 160px;
+        padding: 90px 0;
 
       }
 
 
-      .service-row p {
+      .service-features-heading {
 
-        display: none;
+        display: block;
+
+        margin-bottom: 50px;
 
       }
 
 
-      .service-arrow {
+      .service-features-heading h2 {
 
-        width: 40px;
+        font-size: 43px;
 
-        height: 40px;
+        margin-bottom: 25px;
+
+      }
+
+
+      .feature-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .feature-card {
+
+        min-height: 190px;
+
+      }
+
+
+      .service-showcase-image {
+
+        height: 400px;
+
+      }
+
+
+      .service-detail-cta {
+
+        padding: 95px 0;
 
       }
 
@@ -508,7 +581,7 @@
 
 
 <!-- =====================================================
-     NAVIGATION
+     NAVBAR
 ===================================================== -->
 
 <header class="site-header"
@@ -627,37 +700,48 @@
 
 
 <!-- =====================================================
-     HERO
+     SERVICE HERO
 ===================================================== -->
 
-<section class="inner-hero">
+<section class="service-detail-hero">
 
-  <div class="container inner-hero-content">
+  <div
+    class="service-detail-bg"
+    id="serviceBackground"
+    style="
+      background-image:
+      url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=85');
+    "
+  ></div>
 
-    <div class="inner-kicker">
 
-      Engineering Capabilities
+  <div class="container service-detail-content">
+
+    <div class="service-detail-kicker">
+
+      Engineering Service
 
     </div>
 
 
-    <h1>
+    <h1
+      class="service-detail-title"
+      id="serviceTitle"
+    >
 
-      Engineering
-      <span>
-        without boundaries.
-      </span>
+      Engineering Services
 
     </h1>
 
 
-    <p>
+    <span
+      class="service-detail-category"
+      id="serviceCategory"
+    >
 
-      Integrated engineering disciplines
-      working together to create practical,
-      reliable and execution-ready solutions.
+      GRAPID ENGINEERING
 
-    </p>
+    </span>
 
   </div>
 
@@ -666,15 +750,14 @@
 
 
 <!-- =====================================================
-     SERVICES
+     OVERVIEW
 ===================================================== -->
 
-<section class="services-page">
+<section class="service-overview">
 
   <div class="container">
 
-
-    <div class="services-page-intro">
+    <div class="service-overview-grid">
 
       <div>
 
@@ -684,16 +767,16 @@
             01
           </span>
 
-          What We Do
+          Service Overview
 
         </div>
 
 
-        <h2>
+        <h2 id="serviceHeading">
 
-          Built around
+          Engineering
           <span>
-            your project.
+            built around performance.
           </span>
 
         </h2>
@@ -701,51 +784,135 @@
       </div>
 
 
+      <div class="service-description">
+
+        <p id="serviceDescription">
+
+          Detailed service information will
+          appear here when approved content
+          is published through the GEPL CMS.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="service-features">
+
+  <div class="container">
+
+    <div class="service-features-heading">
+
+      <div>
+
+        <div class="section-label">
+
+          <span>
+            02
+          </span>
+
+          Capabilities
+
+        </div>
+
+
+        <h2>
+          What we deliver.
+        </h2>
+
+      </div>
+
+
       <p>
 
-        From core infrastructure to
-        specialized building systems,
-        GEPL brings multiple technical
-        disciplines together under one
-        execution-focused approach.
+        Service capabilities and technical
+        scope will be displayed here from
+        the GEPL CMS.
 
       </p>
 
     </div>
 
 
+    <div
+      class="feature-grid"
+      id="featureGrid"
+    >
 
-    <div id="allServices">
+      <div class="feature-card">
 
-      <!-- CMS services load here -->
-
-      <div class="service-row">
-
-        <span class="service-number">
+        <span class="feature-number">
           01
         </span>
 
-        <div>
+        <h3>
+          Engineering Planning
+        </h3>
 
-          <h3>
-            Engineering Services
-          </h3>
+      </div>
 
-        </div>
 
-        <p>
-          Service information will appear
-          here when approved CMS content
-          is published.
-        </p>
+      <div class="feature-card">
 
-        <span class="service-arrow">
-          →
+        <span class="feature-number">
+          02
         </span>
+
+        <h3>
+          Technical Coordination
+        </h3>
+
+      </div>
+
+
+      <div class="feature-card">
+
+        <span class="feature-number">
+          03
+        </span>
+
+        <h3>
+          Site Execution
+        </h3>
 
       </div>
 
     </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOWCASE
+===================================================== -->
+
+<section class="service-showcase">
+
+  <div
+    class="service-showcase-image"
+    id="serviceShowcase"
+  >
+
+    <img
+      id="serviceImage"
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85"
+      alt="Engineering service"
+      loading="lazy"
+    >
 
   </div>
 
@@ -757,7 +924,7 @@
      CTA
 ===================================================== -->
 
-<section class="services-cta">
+<section class="service-detail-cta">
 
   <div class="container">
 
@@ -765,7 +932,7 @@
          style="justify-content:center">
 
       <span>
-        START A PROJECT
+        NEXT STEP
       </span>
 
     </div>
@@ -773,9 +940,9 @@
 
     <h2>
 
-      Have an engineering
+      Need this capability
       <span>
-        challenge?
+        on your project?
       </span>
 
     </h2>
@@ -783,14 +950,16 @@
 
     <p>
 
-      Let's discuss the requirements,
-      constraints and possibilities.
+      Tell us about your requirements
+      and project scope.
 
     </p>
 
 
-    <a href="contact.html"
-       class="btn btn-primary">
+    <a
+      href="contact.html"
+      class="btn btn-primary"
+    >
 
       Discuss Your Project
 
@@ -872,30 +1041,44 @@
 
 
 
+<!-- =====================================================
+     JS
+===================================================== -->
+
 <script src="js/api.js"></script>
 <script src="js/app.js"></script>
 
 
 <script>
 
-/* =====================================================
-   SERVICES CMS
-===================================================== */
-
 document.addEventListener(
   "DOMContentLoaded",
-  loadAllServices
+  loadService
 );
 
 
-async function loadAllServices() {
+/* =====================================================
+   LOAD SERVICE FROM CMS
+===================================================== */
 
-  const container =
-    document.getElementById(
-      "allServices"
+async function loadService() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
     );
 
-  if (!container) {
+
+  const serviceId =
+    params.get("id");
+
+
+  /*
+    If no ID is provided,
+    keep the premium fallback.
+  */
+
+  if (!serviceId) {
     return;
   }
 
@@ -906,91 +1089,208 @@ async function loadAllServices() {
       await GEPL.services();
 
 
-    const published =
+    const service =
       (services || [])
-
-        .filter(item =>
-          String(item.status)
-            .toLowerCase() === "published"
-        )
-
-        .sort(
-          (a,b) =>
-            Number(a.display_order || 999)
-            -
-            Number(b.display_order || 999)
+        .find(item =>
+          String(item.id) ===
+          String(serviceId)
         );
 
 
-    /*
-      Keep premium fallback if CMS is empty.
-    */
+    if (!service) {
 
-    if (!published.length) {
+      console.warn(
+        "Service not found."
+      );
+
       return;
+
     }
 
 
-    container.innerHTML =
-      published
-        .map(
-          (service,index) => `
+    /* -----------------------------------------------
+       TITLE
+    ----------------------------------------------- */
 
-          <a
-            class="service-row"
-            href="service.html?id=${encodeURIComponent(
-              service.id || ""
-            )}"
-          >
+    const title =
+      document.getElementById(
+        "serviceTitle"
+      );
 
-            <span class="service-number">
-
-              ${String(index + 1)
-                .padStart(2,"0")}
-
-            </span>
+    const heading =
+      document.getElementById(
+        "serviceHeading"
+      );
 
 
-            <div>
+    if (title && service.title) {
 
-              <h3>
+      title.textContent =
+        service.title;
 
-                ${escapeHTML(
-                  service.title || ""
-                )}
-
-              </h3>
-
-            </div>
+    }
 
 
-            <p>
+    if (heading && service.title) {
 
-              ${escapeHTML(
-                service.short_description || ""
-              )}
+      heading.innerHTML =
+        escapeHTML(service.title) +
+        `<span>
+          engineered for performance.
+        </span>`;
 
-            </p>
+    }
 
 
-            <span class="service-arrow">
+    /* -----------------------------------------------
+       CATEGORY
+    ----------------------------------------------- */
 
-              ↗
+    const category =
+      document.getElementById(
+        "serviceCategory"
+      );
 
-            </span>
 
-          </a>
+    if (
+      category &&
+      service.category
+    ) {
 
-        `
-        )
-        .join("");
+      category.textContent =
+        service.category;
+
+    }
+
+
+    /* -----------------------------------------------
+       DESCRIPTION
+    ----------------------------------------------- */
+
+    const description =
+      document.getElementById(
+        "serviceDescription"
+      );
+
+
+    if (
+      description &&
+      service.description
+    ) {
+
+      description.textContent =
+        service.description;
+
+    }
+
+
+    /* -----------------------------------------------
+       IMAGE
+    ----------------------------------------------- */
+
+    if (service.image) {
+
+      const background =
+        document.getElementById(
+          "serviceBackground"
+        );
+
+
+      const image =
+        document.getElementById(
+          "serviceImage"
+        );
+
+
+      if (background) {
+
+        background.style.backgroundImage =
+          `url("${escapeAttribute(
+            service.image
+          )}")`;
+
+      }
+
+
+      if (image) {
+
+        image.src =
+          service.image;
+
+        image.alt =
+          service.title ||
+          "GEPL Engineering Service";
+
+      }
+
+    }
+
+
+    /* -----------------------------------------------
+       FEATURES
+    ----------------------------------------------- */
+
+    const featureGrid =
+      document.getElementById(
+        "featureGrid"
+      );
+
+
+    if (
+      featureGrid &&
+      service.features
+    ) {
+
+      const features =
+        String(service.features)
+          .split(/[|,\n]+/)
+          .map(item =>
+            item.trim()
+          )
+          .filter(Boolean);
+
+
+      if (features.length) {
+
+        featureGrid.innerHTML =
+          features
+            .map(
+              (feature,index) => `
+
+                <div class="feature-card">
+
+                  <span class="feature-number">
+
+                    ${String(index + 1)
+                      .padStart(2,"0")}
+
+                  </span>
+
+                  <h3>
+
+                    ${escapeHTML(
+                      feature
+                    )}
+
+                  </h3>
+
+                </div>
+
+              `
+            )
+            .join("");
+
+      }
+
+    }
+
 
   }
 
   catch(error) {
 
     console.warn(
-      "Services API:",
+      "GEPL Service API:",
       error
     );
 
@@ -998,6 +1298,10 @@ async function loadAllServices() {
 
 }
 
+
+/* =====================================================
+   SECURITY
+===================================================== */
 
 function escapeHTML(value) {
 
@@ -1007,6 +1311,13 @@ function escapeHTML(value) {
     .replace(/>/g,"&gt;")
     .replace(/"/g,"&quot;")
     .replace(/'/g,"&#039;");
+
+}
+
+
+function escapeAttribute(value) {
+
+  return escapeHTML(value);
 
 }
 
