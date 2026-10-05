@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Industries | GRAPID Engineering Pvt Ltd</title>
+
+<meta
+  name="description"
+  content="Engineering solutions for commercial, industrial, healthcare, pharmaceutical, data center, hospitality and other demanding environments."
+>
+
+<meta name="theme-color"
+      content="#07111f">
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+ href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+ rel="stylesheet">
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+<style>
+
+/* =====================================================
+   INDUSTRIES HERO
+===================================================== */
+
+.industries-hero {
+
+  min-height: 620px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding-bottom: 90px;
+
+  color: white;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(4,10,18,.96),
+      rgba(4,10,18,.7),
+      rgba(4,10,18,.48)
+    ),
+
+    url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=2200&q=85");
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+
+.industries-hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+.industries-kicker {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .2em;
+
+  color: rgba(255,255,255,.58);
+
+}
+
+
+.industries-kicker::before {
+
+  content: "";
+
+  width: 35px;
+
+  height: 1px;
+
+  background: var(--orange);
+
+}
+
+
+.industries-hero h1 {
+
+  max-width: 1000px;
+
+  font-size:
+    clamp(52px,7vw,94px);
+
+  letter-spacing: -.065em;
+
+}
+
+
+.industries-hero h1 span {
+
+  display: block;
+
+  color: rgba(255,255,255,.35);
+
+}
+
+
+.industries-hero p {
+
+  max-width: 600px;
+
+  margin-top: 28px;
+
+  color: rgba(255,255,255,.58);
+
+  font-size: 16px;
+
+}
+
+
+/* =====================================================
+   INDUSTRIES LIST
+===================================================== */
+
+.industries-page {
+
+  padding: 140px 0;
+
+  background: var(--off-white);
+
+}
+
+
+.industries-intro {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    .8fr;
+
+  gap: 100px;
+
+  margin-bottom: 80px;
+
+}
+
+
+.industries-intro h2 {
+
+  font-size:
+    clamp(40px,5vw,68px);
+
+}
+
+
+.industries-intro h2 span {
+
+  display: block;
+
+  color: var(--steel);
+
+}
+
+
+.industries-intro p {
+
+  max-width: 470px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+}
+
+
+.industry-list {
+
+  border-top:
+    1px solid var(--border);
+
+}
+
+
+.industry-item {
+
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr
+    .65fr
+    55px;
+
+  gap: 30px;
+
+  align-items: center;
+
+  min-height: 155px;
+
+  padding: 25px 5px;
+
+  border-bottom:
+    1px solid var(--border);
+
+  transition:
+
+    padding .4s var(--ease),
+
+    background .35s ease;
+
+}
+
+
+.industry-item:hover {
+
+  padding-left: 25px;
+
+  padding-right: 25px;
+
+  background: white;
+
+}
+
+
+.industry-number {
+
+  color: var(--orange);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+}
+
+
+.industry-item h3 {
+
+  font-size:
+    clamp(23px,3vw,34px);
+
+}
+
+
+.industry-item p {
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+}
+
+
+.industry-arrow {
+
+  width: 44px;
+
+  height: 44px;
+
+  border: 1px solid var(--border);
+
+  display: grid;
+
+  place-items: center;
+
+  transition:
+
+    background .3s ease,
+
+    color .3s ease;
+
+}
+
+
+.industry-item:hover
+.industry-arrow {
+
+  background: var(--orange);
+
+  color: white;
+
+  border-color: var(--orange);
+
+}
+
+
+/* =====================================================
+   INDUSTRY CTA
+===================================================== */
+
+.industry-cta {
+
+  padding: 140px 0;
+
+  background: var(--navy);
+
+  color: white;
+
+  text-align: center;
+
+}
+
+
+.industry-cta h2 {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size:
+    clamp(45px,6vw,78px);
+
+}
+
+
+.industry-cta h2 span {
+
+  color: rgba(255,255,255,.3);
+
+}
+
+
+.industry-cta p {
+
+  max-width: 500px;
+
+  margin: 25px auto;
+
+  color: rgba(255,255,255,.5);
+
+}
+
+
+@media(max-width:760px) {
+
+  .industries-hero {
+
+    min-height: 650px;
+
+    padding-bottom: 70px;
+
+  }
+
+
+  .industries-hero h1 {
+
+    font-size: 49px;
+
+  }
+
+
+  .industries-page {
+
+    padding: 90px 0;
+
+  }
+
+
+  .industries-intro {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+
+  }
+
+
+  .industries-intro h2 {
+
+    font-size: 43px;
+
+  }
+
+
+  .industry-item {
+
+    grid-template-columns:
+      40px
+      1fr
+      40px;
+
+    gap: 15px;
+
+    min-height: 145px;
+
+  }
+
+
+  .industry-item p {
+
+    display: none;
+
+  }
+
+
+  .industry-item h3 {
+
+    font-size: 22px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+<div class="container nav-wrap">
+
+<a href="index.html"
+   class="brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="desktop-nav">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="nav-cta">
+
+Discuss a Project
+
+</a>
+
+</nav>
+
+
+<button class="menu-btn"
+        id="menuBtn">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div class="mobile-menu"
+     id="mobileMenu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+<a href="contact.html"
+   class="mobile-menu-cta">
+
+Discuss a Project
+
+</a>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="industries-hero">
+
+<div class="container industries-hero-content">
+
+<div class="industries-kicker">
+
+Markets We Serve
+
+</div>
+
+
+<h1>
+
+Engineering for
+<span>
+demanding environments.
+</span>
+
+</h1>
+
+
+<p>
+
+Different industries demand different
+levels of coordination, reliability and
+technical performance. Our engineering
+approach adapts to the environment.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INDUSTRIES
+===================================================== -->
+
+<section class="industries-page">
+
+<div class="container">
+
+<div class="industries-intro">
+
+<div>
+
+<div class="section-label">
+
+<span>
+01
+</span>
+
+Industry Expertise
+
+</div>
+
+
+<h2>
+
+Built for the
+<span>
+way you operate.</span>
+
+</h2>
+
+</div>
+
+
+<p>
+
+Industry information shown here can be
+managed through the GEPL CMS, allowing
+the company to maintain approved sectors,
+descriptions and visual content without
+changing website code.
+
+</p>
+
+</div>
+
+
+<div class="industry-list"
+     id="industryList">
+
+
+<!-- FALLBACK -->
+
+<div class="industry-item">
+
+<span class="industry-number">
+01
+</span>
+
+<h3>
+Commercial Buildings
+</h3>
+
+<p>
+Integrated engineering solutions for
+commercial environments.
+</p>
+
+<span class="industry-arrow">
+→
+</span>
+
+</div>
+
+
+<div class="industry-item">
+
+<span class="industry-number">
+02
+</span>
+
+<h3>
+Industrial Facilities
+</h3>
+
+<p>
+Engineering support for industrial
+infrastructure and facilities.
+</p>
+
+<span class="industry-arrow">
+→
+</span>
+
+</div>
+
+
+<div class="industry-item">
+
+<span class="industry-number">
+03
+</span>
+
+<h3>
+Data Centers
+</h3>
+
+<p>
+Infrastructure and building systems
+for mission-critical environments.
+</p>
+
+<span class="industry-arrow">
+→
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="industry-cta">
+
+<div class="container">
+
+<div class="section-label light"
+     style="justify-content:center">
+
+<span>
+YOUR INDUSTRY
+</span>
+
+</div>
+
+
+<h2>
+
+Let's engineer
+<span>
+the right solution.</span>
+
+</h2>
+
+
+<p>
+
+Tell us about your facility,
+requirements and project goals.
+
+</p>
+
+
+<a href="contact.html"
+   class="btn btn-primary">
+
+Discuss Your Project
+
+<span>↗</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-main">
+
+<div class="footer-brand">
+
+<div class="brand-mark">
+GE
+</div>
+
+<div class="brand-text">
+
+<strong>GRAPID</strong>
+
+<span>
+ENGINEERING PVT LTD
+</span>
+
+</div>
+
+</div>
+
+
+<p>
+
+Integrated engineering solutions
+from concept to commissioning.
+
+</p>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+
+©
+<span id="year"></span>
+GRAPID Engineering Pvt Ltd.
+
+</span>
+
+
+<span>
+Engineering • Execution • Performance
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+/* =====================================================
+   INDUSTRIES CMS
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  loadIndustriesPage
+);
+
+
+async function loadIndustriesPage() {
+
+  const container =
+    document.getElementById(
+      "industryList"
+    );
+
+
+  if (!container) {
+    return;
+  }
+
+
+  try {
+
+    const industries =
+      await GEPL.industries();
+
+
+    const published =
+      (industries || [])
+
+        .filter(item =>
+          String(item.status)
+            .toLowerCase() === "published"
+        )
+
+        .sort(
+          (a,b) =>
+            Number(a.display_order || 999)
+            -
+            Number(b.display_order || 999)
+        );
+
+
+    /*
+      Keep fallback when CMS is empty.
+    */
+
+    if (!published.length) {
+      return;
+    }
+
+
+    container.innerHTML =
+      published
+        .map(
+          (industry,index) => `
+
+          <a
+            class="industry-item"
+            href="contact.html"
+          >
+
+            <span class="industry-number">
+
+              ${String(index + 1)
+                .padStart(2,"0")}
+
+            </span>
+
+
+            <h3>
+
+              ${escapeHTML(
+                industry.name || ""
+              )}
+
+            </h3>
+
+
+            <p>
+
+              ${escapeHTML(
+                industry.description || ""
+              )}
+
+            </p>
+
+
+            <span class="industry-arrow">
+
+              ↗
+
+            </span>
+
+          </a>
+
+        `
+        )
+        .join("");
+
+  }
+
+  catch(error) {
+
+    console.warn(
+      "Industries API:",
+      error
+    );
+
+  }
+
+}
+
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
