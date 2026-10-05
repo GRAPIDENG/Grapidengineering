@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Engineering Services | GRAPID Engineering</title>
+
+  <meta name="description"
+        content="Explore engineering, MEP, electrical, HVAC, fire protection, ELV, interior and specialized engineering services from GRAPID Engineering Pvt Ltd.">
+
+  <meta name="theme-color"
+        content="#07111f">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="css/style.css">
+
+  <style>
+
+    /* =====================================================
+       SERVICES PAGE
+    ===================================================== */
+
+    .inner-hero {
+
+      min-height: 570px;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding-bottom: 85px;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          rgba(4,10,18,.97),
+          rgba(4,10,18,.76),
+          rgba(4,10,18,.55)
+        ),
+
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2200&q=85");
+
+      background-size: cover;
+
+      background-position: center;
+
+      color: white;
+
+      overflow: hidden;
+
+    }
+
+
+    .inner-hero::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      opacity: .12;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,.18) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.18) 1px,
+          transparent 1px
+        );
+
+      background-size: 80px 80px;
+
+      mask-image:
+        linear-gradient(
+          90deg,
+          black,
+          transparent
+        );
+
+    }
+
+
+    .inner-hero-content {
+
+      position: relative;
+
+      z-index: 2;
+
+    }
+
+
+    .inner-kicker {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      margin-bottom: 25px;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .2em;
+
+      color:
+        rgba(255,255,255,.6);
+
+    }
+
+
+    .inner-kicker::before {
+
+      content: "";
+
+      width: 35px;
+
+      height: 1px;
+
+      background: var(--orange);
+
+    }
+
+
+    .inner-hero h1 {
+
+      max-width: 950px;
+
+      font-size:
+        clamp(
+          52px,
+          7vw,
+          94px
+        );
+
+      letter-spacing: -.065em;
+
+    }
+
+
+    .inner-hero h1 span {
+
+      display: block;
+
+      color:
+        rgba(255,255,255,.38);
+
+    }
+
+
+    .inner-hero p {
+
+      max-width: 580px;
+
+      margin-top: 28px;
+
+      color:
+        rgba(255,255,255,.58);
+
+      font-size: 16px;
+
+    }
+
+
+    /* SERVICES LIST */
+
+    .services-page {
+
+      padding: 130px 0;
+
+      background: var(--off-white);
+
+    }
+
+
+    .services-page-intro {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        .8fr;
+
+      gap: 100px;
+
+      margin-bottom: 90px;
+
+    }
+
+
+    .services-page-intro h2 {
+
+      font-size:
+        clamp(
+          40px,
+          5vw,
+          68px
+        );
+
+    }
+
+
+    .services-page-intro h2 span {
+
+      display: block;
+
+      color: var(--steel);
+
+    }
+
+
+    .services-page-intro p {
+
+      max-width: 460px;
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+    }
+
+
+    #allServices {
+
+      border-top:
+        1px solid var(--border);
+
+    }
+
+
+    .service-row {
+
+      display: grid;
+
+      grid-template-columns:
+        90px
+        1fr
+        .65fr
+        80px;
+
+      gap: 30px;
+
+      align-items: center;
+
+      min-height: 180px;
+
+      padding: 30px 5px;
+
+      border-bottom:
+        1px solid var(--border);
+
+      transition:
+
+        padding .4s var(--ease),
+
+        background .4s ease;
+
+    }
+
+
+    .service-row:hover {
+
+      padding-left: 25px;
+
+      padding-right: 25px;
+
+      background:
+        rgba(7,17,31,.025);
+
+    }
+
+
+    .service-number {
+
+      font-size: 11px;
+
+      color: var(--orange);
+
+      font-weight: 700;
+
+      letter-spacing: .1em;
+
+    }
+
+
+    .service-row h3 {
+
+      font-size:
+        clamp(
+          24px,
+          3vw,
+          35px
+        );
+
+    }
+
+
+    .service-row p {
+
+      font-size: 13px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .service-arrow {
+
+      width: 48px;
+
+      height: 48px;
+
+      border: 1px solid var(--border);
+
+      display: grid;
+
+      place-items: center;
+
+      font-size: 17px;
+
+      transition:
+
+        background .3s ease,
+
+        color .3s ease,
+
+        transform .3s ease;
+
+    }
+
+
+    .service-row:hover
+    .service-arrow {
+
+      background: var(--orange);
+
+      color: white;
+
+      border-color:
+        var(--orange);
+
+      transform:
+        translate(4px,-4px);
+
+    }
+
+
+    /* CTA */
+
+    .services-cta {
+
+      padding: 120px 0;
+
+      background: var(--navy);
+
+      color: white;
+
+      text-align: center;
+
+    }
+
+
+    .services-cta h2 {
+
+      max-width: 850px;
+
+      margin:
+        0 auto;
+
+      font-size:
+        clamp(
+          45px,
+          6vw,
+          78px
+        );
+
+    }
+
+
+    .services-cta h2 span {
+
+      color:
+        rgba(255,255,255,.35);
+
+    }
+
+
+    .services-cta p {
+
+      max-width: 500px;
+
+      margin:
+        25px auto 0;
+
+      color:
+        rgba(255,255,255,.5);
+
+    }
+
+
+    @media(max-width:760px) {
+
+      .inner-hero {
+
+        min-height: 650px;
+
+        padding-bottom: 70px;
+
+      }
+
+
+      .inner-hero h1 {
+
+        font-size: 48px;
+
+      }
+
+
+      .services-page {
+
+        padding: 90px 0;
+
+      }
+
+
+      .services-page-intro {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 60px;
+
+      }
+
+
+      .services-page-intro h2 {
+
+        font-size: 43px;
+
+      }
+
+
+      .service-row {
+
+        grid-template-columns:
+          40px
+          1fr
+          45px;
+
+        gap: 15px;
+
+        min-height: 160px;
+
+      }
+
+
+      .service-row p {
+
+        display: none;
+
+      }
+
+
+      .service-arrow {
+
+        width: 40px;
+
+        height: 40px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+  <div class="container nav-wrap">
+
+    <a href="index.html"
+       class="brand">
+
+      <div class="brand-mark">
+        GE
+      </div>
+
+      <div class="brand-text">
+
+        <strong>
+          GRAPID
+        </strong>
+
+        <span>
+          ENGINEERING PVT LTD
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <nav class="desktop-nav">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="projects.html">
+        Projects
+      </a>
+
+      <a href="industries.html">
+        Industries
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="contact.html"
+         class="nav-cta">
+
+        Discuss a Project
+
+      </a>
+
+    </nav>
+
+
+    <button class="menu-btn"
+            id="menuBtn">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+
+  <div class="mobile-menu"
+       id="mobileMenu">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="services.html">
+      Services
+    </a>
+
+    <a href="projects.html">
+      Projects
+    </a>
+
+    <a href="industries.html">
+      Industries
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
+    <a href="contact.html"
+       class="mobile-menu-cta">
+
+      Discuss a Project
+
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="inner-hero">
+
+  <div class="container inner-hero-content">
+
+    <div class="inner-kicker">
+
+      Engineering Capabilities
+
+    </div>
+
+
+    <h1>
+
+      Engineering
+      <span>
+        without boundaries.
+      </span>
+
+    </h1>
+
+
+    <p>
+
+      Integrated engineering disciplines
+      working together to create practical,
+      reliable and execution-ready solutions.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services-page">
+
+  <div class="container">
+
+
+    <div class="services-page-intro">
+
+      <div>
+
+        <div class="section-label">
+
+          <span>
+            01
+          </span>
+
+          What We Do
+
+        </div>
+
+
+        <h2>
+
+          Built around
+          <span>
+            your project.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        From core infrastructure to
+        specialized building systems,
+        GEPL brings multiple technical
+        disciplines together under one
+        execution-focused approach.
+
+      </p>
+
+    </div>
+
+
+
+    <div id="allServices">
+
+      <!-- CMS services load here -->
+
+      <div class="service-row">
+
+        <span class="service-number">
+          01
+        </span>
+
+        <div>
+
+          <h3>
+            Engineering Services
+          </h3>
+
+        </div>
+
+        <p>
+          Service information will appear
+          here when approved CMS content
+          is published.
+        </p>
+
+        <span class="service-arrow">
+          →
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="services-cta">
+
+  <div class="container">
+
+    <div class="section-label light"
+         style="justify-content:center">
+
+      <span>
+        START A PROJECT
+      </span>
+
+    </div>
+
+
+    <h2>
+
+      Have an engineering
+      <span>
+        challenge?
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Let's discuss the requirements,
+      constraints and possibilities.
+
+    </p>
+
+
+    <a href="contact.html"
+       class="btn btn-primary">
+
+      Discuss Your Project
+
+      <span>
+        ↗
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+
+        <div class="brand-mark">
+          GE
+        </div>
+
+        <div class="brand-text">
+
+          <strong>
+            GRAPID
+          </strong>
+
+          <span>
+            ENGINEERING PVT LTD
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <p>
+
+        Integrated engineering solutions
+        from concept to commissioning.
+
+      </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+        GRAPID Engineering Pvt Ltd.
+
+      </span>
+
+
+      <span>
+
+        Engineering • Execution • Performance
+
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+
+<script>
+
+/* =====================================================
+   SERVICES CMS
+===================================================== */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  loadAllServices
+);
+
+
+async function loadAllServices() {
+
+  const container =
+    document.getElementById(
+      "allServices"
+    );
+
+  if (!container) {
+    return;
+  }
+
+
+  try {
+
+    const services =
+      await GEPL.services();
+
+
+    const published =
+      (services || [])
+
+        .filter(item =>
+          String(item.status)
+            .toLowerCase() === "published"
+        )
+
+        .sort(
+          (a,b) =>
+            Number(a.display_order || 999)
+            -
+            Number(b.display_order || 999)
+        );
+
+
+    /*
+      Keep premium fallback if CMS is empty.
+    */
+
+    if (!published.length) {
+      return;
+    }
+
+
+    container.innerHTML =
+      published
+        .map(
+          (service,index) => `
+
+          <a
+            class="service-row"
+            href="service.html?id=${encodeURIComponent(
+              service.id || ""
+            )}"
+          >
+
+            <span class="service-number">
+
+              ${String(index + 1)
+                .padStart(2,"0")}
+
+            </span>
+
+
+            <div>
+
+              <h3>
+
+                ${escapeHTML(
+                  service.title || ""
+                )}
+
+              </h3>
+
+            </div>
+
+
+            <p>
+
+              ${escapeHTML(
+                service.short_description || ""
+              )}
+
+            </p>
+
+
+            <span class="service-arrow">
+
+              ↗
+
+            </span>
+
+          </a>
+
+        `
+        )
+        .join("");
+
+  }
+
+  catch(error) {
+
+    console.warn(
+      "Services API:",
+      error
+    );
+
+  }
+
+}
+
+
+function escapeHTML(value) {
+
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
