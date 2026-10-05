@@ -5,27 +5,103 @@
 =========================================================
 */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
 
-  loadHero();
-  loadServices();
-  loadProjects();
-  loadIndustries();
-  loadClients();
-  loadStats();
+    initHome();
 
-});
+  }
+);
+
+
+/* =====================================================
+   HOMEPAGE INITIALIZATION
+===================================================== */
+
+async function initHome() {
+
+  /*
+    Load CMS datasets once.
+    This prevents duplicate API requests.
+  */
+
+  const [
+    hero,
+    services,
+    projects,
+    industries,
+    clients
+  ] = await Promise.allSettled([
+
+    GEPL.hero(),
+    GEPL.services(),
+    GEPL.projects(),
+    GEPL.industries(),
+    GEPL.clients()
+
+  ]);
+
+
+  const data = {
+
+    hero:
+      hero.status === "fulfilled"
+        ? hero.value
+        : [],
+
+    services:
+      services.status === "fulfilled"
+        ? services.value
+        : [],
+
+    projects:
+      projects.status === "fulfilled"
+        ? projects.value
+        : [],
+
+    industries:
+      industries.status === "fulfilled"
+        ? industries.value
+        : [],
+
+    clients:
+      clients.status === "fulfilled"
+        ? clients.value
+        : []
+
+  };
+
+
+  /*
+    Store globally only if other
+    frontend modules need the data.
+  */
+
+  window.GEPL_HOME_DATA = data;
+
+
+  loadHero(data.hero);
+  loadServices(data.services);
+  loadProjects(data.projects);
+  loadIndustries(data.industries);
+  loadClients(data.clients);
+  loadStats(
+    data.projects,
+    data.services,
+    data.clients
+  );
+
+}
 
 
 /* =====================================================
    HERO
 ===================================================== */
 
-async function loadHero() {
+function loadHero(rows) {
 
   try {
-
-    const rows = await GEPL.hero();
 
     if (!rows || !rows.length) {
       return;
@@ -33,50 +109,82 @@ async function loadHero() {
 
 
     const hero =
-      rows.find(row =>
-        String(row.status).toLowerCase() === "published"
+      rows.find(
+        row =>
+          String(row.status)
+            .toLowerCase() === "published"
       ) || rows[0];
 
 
     const subtitle =
-      document.getElementById("heroSubtitle");
+      document.getElementById(
+        "heroSubtitle"
+      );
 
     const title =
-      document.getElementById("heroTitle");
+      document.getElementById(
+        "heroTitle"
+      );
 
     const description =
-      document.getElementById("heroDescription");
+      document.getElementById(
+        "heroDescription"
+      );
 
 
-    if (subtitle && hero.subtitle) {
+    if (
+      subtitle &&
+      hero.subtitle
+    ) {
+
       subtitle.textContent =
         hero.subtitle;
+
     }
 
 
-    if (title && hero.title) {
+    if (
+      title &&
+      hero.title
+    ) {
+
       title.textContent =
         hero.title;
+
     }
 
 
-    if (description && hero.description) {
+    if (
+      description &&
+      hero.description
+    ) {
+
       description.textContent =
         hero.description;
+
     }
 
 
-    /* Optional background image */
+    /*
+      Optional CMS background image
+    */
 
-    if (hero.background_image) {
+    if (
+      hero.background_image
+    ) {
 
       const heroImage =
-        document.querySelector(".hero-image");
+        document.querySelector(
+          ".hero-image"
+        );
+
 
       if (heroImage) {
 
         heroImage.style.backgroundImage =
-          `url("${hero.background_image}")`;
+          `url("${escapeAttribute(
+            hero.background_image
+          )}")`;
 
       }
 
@@ -100,10 +208,13 @@ async function loadHero() {
    SERVICES
 ===================================================== */
 
-async function loadServices() {
+function loadServices(services) {
 
   const container =
-    document.getElementById("servicesGrid");
+    document.getElementById(
+      "servicesGrid"
+    );
+
 
   if (!container) {
     return;
@@ -112,31 +223,38 @@ async function loadServices() {
 
   try {
 
-    const services =
-      await GEPL.services();
-
-
-    if (!services || !services.length) {
+    if (
+      !services ||
+      !services.length
+    ) {
 
       /*
-       Keep the premium fallback design.
-       Do not display fake CMS data.
+        Keep premium HTML fallback.
       */
 
       return;
+
     }
 
 
     const published =
       services
-        .filter(item =>
-          String(item.status)
-            .toLowerCase() === "published"
+
+        .filter(
+          item =>
+            String(item.status)
+              .toLowerCase() ===
+            "published"
         )
+
         .sort(
           (a, b) =>
-            Number(a.display_order || 999) -
-            Number(b.display_order || 999)
+            Number(
+              a.display_order || 999
+            ) -
+            Number(
+              b.display_order || 999
+            )
         );
 
 
@@ -146,42 +264,50 @@ async function loadServices() {
 
 
     container.innerHTML =
-      published.map(
-        (service, index) => {
+      published
+        .map(
+          (service, index) => {
 
-          const number =
-            String(index + 1)
-              .padStart(2, "0");
+            const number =
+              String(index + 1)
+                .padStart(2, "0");
 
 
-          return `
+            return `
 
-            <article class="service-empty">
+              <article class="service-empty">
 
-              <span>
-                ${number}
-              </span>
+                <span>
+                  ${number}
+                </span>
 
-              <h3>
-                ${escapeHTML(service.title || "")}
-              </h3>
+                <h3>
+                  ${escapeHTML(
+                    service.title || ""
+                  )}
+                </h3>
 
-              <p>
-                ${escapeHTML(
-                  service.short_description || ""
-                )}
-              </p>
+                <p>
+                  ${escapeHTML(
+                    service.short_description || ""
+                  )}
+                </p>
 
-              <a href="service.html?id=${encodeURIComponent(service.id || "")}">
-                Explore →
-              </a>
+                <a
+                  href="service.html?id=${encodeURIComponent(
+                    service.id || ""
+                  )}"
+                >
+                  Explore →
+                </a>
 
-            </article>
+              </article>
 
-          `;
+            `;
 
-        }
-      ).join("");
+          }
+        )
+        .join("");
 
   }
 
@@ -201,10 +327,13 @@ async function loadServices() {
    PROJECTS
 ===================================================== */
 
-async function loadProjects() {
+function loadProjects(projects) {
 
   const projectBox =
-    document.getElementById("featuredProject");
+    document.getElementById(
+      "featuredProject"
+    );
+
 
   if (!projectBox) {
     return;
@@ -213,21 +342,23 @@ async function loadProjects() {
 
   try {
 
-    const projects =
-      await GEPL.projects();
+    if (
+      !projects ||
+      !projects.length
+    ) {
 
-
-    if (!projects || !projects.length) {
       return;
+
     }
 
 
     const published =
-      projects
-        .filter(item =>
+      projects.filter(
+        item =>
           String(item.status)
-            .toLowerCase() === "published"
-        );
+            .toLowerCase() ===
+          "published"
+      );
 
 
     if (!published.length) {
@@ -236,11 +367,18 @@ async function loadProjects() {
 
 
     const featured =
-      published.find(item =>
-        String(item.featured)
-          .toLowerCase() === "true"
+      published.find(
+        item =>
+          String(item.featured)
+            .toLowerCase() ===
+          "true"
       ) || published[0];
 
+
+    /*
+      Temporary fallback image.
+      Replace with GEPL placeholder later.
+    */
 
     const image =
       featured.cover_image ||
@@ -254,9 +392,11 @@ async function loadProjects() {
         <img
           src="${escapeAttribute(image)}"
           alt="${escapeAttribute(
-            featured.project_name || "GEPL Project"
+            featured.project_name ||
+            "GEPL Project"
           )}"
           loading="lazy"
+          decoding="async"
         >
 
       </div>
@@ -277,7 +417,8 @@ async function loadProjects() {
         <h3>
 
           ${escapeHTML(
-            featured.project_name || ""
+            featured.project_name ||
+            ""
           )}
 
         </h3>
@@ -286,7 +427,8 @@ async function loadProjects() {
         <p>
 
           ${escapeHTML(
-            featured.description || ""
+            featured.description ||
+            ""
           )}
 
         </p>
@@ -296,7 +438,8 @@ async function loadProjects() {
           href="project.html?id=${encodeURIComponent(
             featured.id || ""
           )}"
-          class="text-link">
+          class="text-link"
+        >
 
           View Project →
 
@@ -324,10 +467,13 @@ async function loadProjects() {
    INDUSTRIES
 ===================================================== */
 
-async function loadIndustries() {
+function loadIndustries(industries) {
 
   const container =
-    document.getElementById("industriesList");
+    document.getElementById(
+      "industriesList"
+    );
+
 
   if (!container) {
     return;
@@ -336,25 +482,34 @@ async function loadIndustries() {
 
   try {
 
-    const industries =
-      await GEPL.industries();
+    if (
+      !industries ||
+      !industries.length
+    ) {
 
-
-    if (!industries || !industries.length) {
       return;
+
     }
 
 
     const published =
       industries
-        .filter(item =>
-          String(item.status)
-            .toLowerCase() === "published"
+
+        .filter(
+          item =>
+            String(item.status)
+              .toLowerCase() ===
+            "published"
         )
+
         .sort(
           (a, b) =>
-            Number(a.display_order || 999) -
-            Number(b.display_order || 999)
+            Number(
+              a.display_order || 999
+            ) -
+            Number(
+              b.display_order || 999
+            )
         );
 
 
@@ -364,17 +519,23 @@ async function loadIndustries() {
 
 
     container.innerHTML =
-      published.map(item => `
+      published
+        .map(
+          item => `
 
-        <a href="industries.html">
+            <a href="industries.html">
 
-          ${escapeHTML(item.name || "")}
+              ${escapeHTML(
+                item.name || ""
+              )}
 
-          <span>↗</span>
+              <span>↗</span>
 
-        </a>
+            </a>
 
-      `).join("");
+          `
+        )
+        .join("");
 
   }
 
@@ -394,16 +555,13 @@ async function loadIndustries() {
    CLIENTS
 ===================================================== */
 
-async function loadClients() {
+function loadClients(clients) {
 
   try {
 
-    const clients =
-      await GEPL.clients();
-
     /*
-      Client section will be implemented
-      after the CMS has approved client data.
+      Keep available globally
+      for future client section.
     */
 
     window.GEPL_CLIENTS =
@@ -427,25 +585,20 @@ async function loadClients() {
    STATS
 ===================================================== */
 
-async function loadStats() {
+function loadStats(
+  projects,
+  services,
+  clients
+) {
 
   try {
-
-    const projects =
-      await GEPL.projects();
-
-    const services =
-      await GEPL.services();
-
-    const clients =
-      await GEPL.clients();
-
 
     const publishedProjects =
       (projects || []).filter(
         item =>
           String(item.status)
-            .toLowerCase() === "published"
+            .toLowerCase() ===
+          "published"
       );
 
 
@@ -453,7 +606,8 @@ async function loadStats() {
       (services || []).filter(
         item =>
           String(item.status)
-            .toLowerCase() === "published"
+            .toLowerCase() ===
+          "published"
       );
 
 
@@ -461,7 +615,8 @@ async function loadStats() {
       (clients || []).filter(
         item =>
           String(item.status)
-            .toLowerCase() === "published"
+            .toLowerCase() ===
+          "published"
       );
 
 
@@ -470,16 +625,17 @@ async function loadStats() {
       publishedProjects.length
     );
 
+
     setStat(
       "services",
       publishedServices.length
     );
 
+
     setStat(
       "clients",
       publishedClients.length
     );
-
 
   }
 
@@ -495,12 +651,20 @@ async function loadStats() {
 }
 
 
-function setStat(name, value) {
+/* =====================================================
+   STAT VALUE
+===================================================== */
+
+function setStat(
+  name,
+  value
+) {
 
   const element =
     document.querySelector(
       `[data-stat="${name}"]`
     );
+
 
   if (!element) {
     return;
@@ -524,7 +688,10 @@ function setStat(name, value) {
    NUMBER ANIMATION
 ===================================================== */
 
-function animateNumber(element, target) {
+function animateNumber(
+  element,
+  target
+) {
 
   const duration = 900;
 
@@ -532,18 +699,24 @@ function animateNumber(element, target) {
     performance.now();
 
 
-  function update(currentTime) {
+  function update(
+    currentTime
+  ) {
 
     const progress =
       Math.min(
-        (currentTime - startTime) /
+        (
+          currentTime -
+          startTime
+        ) /
         duration,
         1
       );
 
 
     const eased =
-      1 - Math.pow(
+      1 -
+      Math.pow(
         1 - progress,
         3
       );
@@ -559,7 +732,9 @@ function animateNumber(element, target) {
       `${current}+`;
 
 
-    if (progress < 1) {
+    if (
+      progress < 1
+    ) {
 
       requestAnimationFrame(
         update
@@ -583,18 +758,42 @@ function animateNumber(element, target) {
 
 function escapeHTML(value) {
 
-  return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+  return String(
+    value ?? ""
+  )
+
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+
+    .replace(
+      /</g,
+      "&lt;"
+    )
+
+    .replace(
+      />/g,
+      "&gt;"
+    )
+
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+
+    .replace(
+      /'/g,
+      "&#039;"
+    );
 
 }
 
 
 function escapeAttribute(value) {
 
-  return escapeHTML(value);
+  return escapeHTML(
+    value
+  );
 
 }
